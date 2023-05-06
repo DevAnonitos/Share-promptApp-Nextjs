@@ -71,6 +71,17 @@
   }
 }
 
+@keyframes slide-in {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 /* Tailwind Styles */
 
 .app {
@@ -86,6 +97,7 @@
 }
 
 .head_text {
+  animation: slide-in 0.5s ease-out forwards;
   @apply mt-5 text-5xl font-extrabold leading-[1.15] text-black sm:text-6xl;
 }
 
@@ -123,9 +135,16 @@
 
 /* Feed Component */
 .feed {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
   @apply mt-16 mx-auto w-full max-w-xl flex justify-center items-center flex-col gap-2;
 }
 
+.feed--show {
+  opacity: 1;
+  transform: translateY(0);
+}
 /* Form Component */
 .form_textarea {
   @apply w-full flex rounded-lg h-[200px] mt-2 p-3 text-sm text-gray-500 outline-0;
