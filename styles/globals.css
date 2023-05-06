@@ -40,6 +40,30 @@
   filter: invert(1);
 }
 
+.border-animation {
+  border: 2px solid #333;
+  border-radius: 5px;
+  position: relative;
+}
+
+.border-animation::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #333;
+  opacity: 0.2;
+  transition: all 0.5s ease-out;
+  z-index: -1;
+}
+
+.border-animation:hover::before {
+  width: 100%; 
+}
+
+
 .gradient {
   height: fit-content;
   z-index: 3;
@@ -70,6 +94,7 @@
     padding: 0;
   }
 }
+
 
 @keyframes slide-in {
   from {
