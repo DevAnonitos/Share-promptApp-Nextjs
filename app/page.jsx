@@ -1,5 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react';
+import { Feed } from '@/components';
 
 const page = () => {
 
@@ -21,13 +22,12 @@ const page = () => {
                 </h1>
 
                 <p className='desc text-center'>
-                    Promptopia is an open-source AI prompting tool for modern world to
+                    PromptApp is an open-source AI prompting tool for modern world to
                     discover, create and share creative prompts
                 </p>
 
                 <div className={`feed ${showFeed ? 'feed--show' : ''}`}>
-                    {/* <Feed /> */}
-                    Hello
+                    <Feed />
                 </div>
             </section>
         </>
