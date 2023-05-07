@@ -42,7 +42,7 @@
 
 .border-animation {
   border: 2px solid #333;
-  border-radius: 14px;
+  border-radius: 10px;
   position: relative;
   padding: 4px 8px;
 }
@@ -56,13 +56,13 @@
   height: 100%;
   background-color: #333;
   opacity: 0.2;
-  border-radius: 14px;
+  border-radius: 10px;
   transition: all 0.5s ease-out;
   z-index: -1;
 }
 
 .border-animation:hover::before {
-  border-radius: 14px;
+  border-radius: 10px;
   width: 100%;
 }
 
@@ -213,11 +213,11 @@
 }
 
 .dropdown {
-  @apply absolute right-0 top-full mt-3 w-full p-5 rounded-lg bg-white min-w-[210px] flex flex-col gap-2 justify-end items-end;
+  @apply absolute right-0 top-full mt-5 w-full p-5 rounded-lg bg-white min-w-[210px] flex flex-col gap-2 justify-center text-center items-center border-2 shadow-sm transform scale-110 transition-transform duration-150 ease-in-out;
 }
 
 .dropdown_link {
-  @apply text-sm font-inter text-gray-700 hover:text-gray-500 font-medium;
+  @apply text-sm font-inter text-gray-700 hover:text-gray-500 font-medium hover:bg-slate-200 w-full py-3 px-1 rounded-xl transition-all duration-150 ease-in-out delay-75;
 }
 
 /* PromptCard Component */

@@ -9,6 +9,7 @@ const Navbar = () => {
 
     const isUserLoggedIn = true;
 
+    const [toggleDropdown, setToggleDropdown] = useState(false);
     // const [providers, setProviders] = useState(null);
 
     // useEffect(() => {
@@ -77,6 +78,56 @@ const Navbar = () => {
                                     SignIn
                                 </button>
                             ))} */}
+                        </>
+                    )}
+                </div>
+
+                {/* Mobile navigation */}
+                <div className='sm:hidden flex relative'>
+                    {isUserLoggedIn ? (
+                        <div className='flex'>
+                            <Image
+                                src="/assets/images/logo.svg"
+                                width={37}
+                                height={37}
+                                className='rounded-full ring-2 bottom-2 cursor-pointer'
+                                alt='profile'
+                                onClick={() => setToggleDropdown(!toggleDropdown)}
+                            />
+                            {/* Toggle DropDown */}
+
+                            {toggleDropdown && (
+                                <div className='dropdown z-50'>
+                                    <Link
+                                        href="/profile"
+                                        className='dropdown_link border-animation '
+                                        onClick={() => setToggleDropdown(false)}
+                                    >
+                                        My Profile
+                                    </Link>
+                                    <Link
+                                        href="/create-prompt"
+                                        className='dropdown_link border-animation '
+                                        onClick={() => setToggleDropdown(false)}
+                                    >
+                                        Create Prompt
+                                    </Link>
+                                    <button
+                                        type='button'
+                                        onClick={() => {
+                                            setToggleDropdown(false);
+                                            signOut();
+                                        }}
+                                        className='mt-5 w-full black_btn'
+                                    >
+                                        SignOut
+                                    </button>
+                                </div>
+                            )}
+                        </div>
+                    ) : (
+                        <>
+
                         </>
                     )}
                 </div>
