@@ -7,19 +7,20 @@ import { signIn, signOut, useSession, getProviders } from "next-auth/react";
 
 const Navbar = () => {
 
-    const isUserLoggedIn = true;
+    const { data: session } = useSession();
 
     const [toggleDropdown, setToggleDropdown] = useState(false);
-    // const [providers, setProviders] = useState(null);
+    const [providers, setProviders] = useState(null);
 
-    // useEffect(() => {
-    //     (
-    //         async () => {
-    //             const res = await getProviders();
-    //             setProviders(res);
-    //         }
-    //     )();
-    // }, []);
+    useEffect(() => {
+        const setUpProviders = async () => {
+            const res = await getProviders();
+
+            setProviders(res);
+        }
+
+        setUpProviders();
+    }, []);
 
     return (
         <>
@@ -37,7 +38,7 @@ const Navbar = () => {
 
                 {/* Desktop navigation */}
                 <div className='sm:flex hidden'>
-                    {isUserLoggedIn ? (
+                    {session?.user ? (
                         <div className='flex gap-3 md:gap-5'>
                             <Link
                                 href="/create-prompt"
@@ -48,7 +49,7 @@ const Navbar = () => {
 
                             <button
                                 type='button'
-                                // onClick={signOut}
+                                onClick={signOut}
                                 className='outline_btn'
                             >
                                 SignOut
@@ -56,7 +57,7 @@ const Navbar = () => {
 
                             <Link href="/profile">
                                 <Image
-                                    src="/assets/images/logo.svg"
+                                    src={session?.user.image}
                                     width={37}
                                     height={37}
                                     className='rounded-full ring-2 bottom-2'
@@ -66,28 +67,27 @@ const Navbar = () => {
                         </div>
                     ) : (
                         <>
-                            {/* {providers && Object.values(providers).map((provider) => (
+                            {providers && Object.values(providers).map((provider) => (
                                 <button
                                     type='button'
                                     key={provider.name}
-                                    onClick={() => {
-                                        signIn(provider.id)
-                                    }}
+                                    onClick={() => signIn(provider.id)
+                                    }
                                     className='black_btn'
                                 >
                                     SignIn
                                 </button>
-                            ))} */}
+                            ))}
                         </>
                     )}
                 </div>
 
                 {/* Mobile navigation */}
                 <div className='sm:hidden flex relative'>
-                    {isUserLoggedIn ? (
+                    {session?.user ? (
                         <div className='flex'>
                             <Image
-                                src="/assets/images/logo.svg"
+                                src={session?.user.image}
                                 width={37}
                                 height={37}
                                 className='rounded-full ring-2 bottom-2 cursor-pointer'
@@ -127,18 +127,17 @@ const Navbar = () => {
                         </div>
                     ) : (
                         <>
-                            {/* {providers && Object.values(providers).map((provider) => (
+                            {providers && Object.values(providers).map((provider) => (
                                 <button
                                     type='button'
                                     key={provider.name}
-                                    onClick={() => {
-                                        signIn(provider.id)
-                                    }}
+                                    onClick={() => signIn(provider.id)
+                                    }
                                     className='black_btn'
                                 >
                                     SignIn
                                 </button>
-                            ))} */}
+                            ))}
                         </>
                     )}
                 </div>
