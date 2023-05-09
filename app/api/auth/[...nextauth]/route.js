@@ -3,6 +3,7 @@ import GoogleProvider from "next-auth/providers/google";
 import { connectToDB } from "@/utils/database";
 import User from "@/models/user";
 
+
 const handler = NextAuth({
     providers: [
         GoogleProvider({
@@ -16,14 +17,17 @@ const handler = NextAuth({
                 email: session.user.email,
             })
 
-            session.user.id = sessionUser._id.toString();
+            if (!sessionUser) {
+                console.warn(`User not found in database: ${session.user.email}`);
+                return session;
+            }
 
-            sessionStorage.setItem('user', JSON.stringify(session.user));
+            session.user.id = sessionUser._id.toString();
 
             return session;
         },
 
-        async signIn({ account, profile, user, credentials }) {
+        async signIn({ profile }) {
             try {
                 await connectToDB();
 
@@ -32,11 +36,14 @@ const handler = NextAuth({
                 });
 
                 if(!userExists) {
+                    console.log(`Creating new user: ${profile.email}`)
                     await User.create({
                         email: profile.email,
                         username: profile.name.replace(" ", "").toLowerCase(),
                         image: profile.picture,
                     });
+                }else {
+                    console.log(`User found in database: ${profile.email}`);
                 }
 
                 return true;
