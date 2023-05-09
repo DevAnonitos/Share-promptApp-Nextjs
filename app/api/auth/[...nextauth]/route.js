@@ -49,7 +49,11 @@ const handler = NextAuth({
                 return true;
             } catch (error) {
                 console.log("Error checking if user exists: ", error.message);
-                return false;
+                return {
+                    error: "signIn",
+                    message: "Failed to sign in. Please try again.",
+                    statusCode: 401,
+                };
             }
         },
     }
