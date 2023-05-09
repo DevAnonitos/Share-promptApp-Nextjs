@@ -15,6 +15,8 @@ export const connectToDB = async () => {
             dbName: "share_promptApp",
             useNewUrlParser: true,
             useUnifiedTopology: true,
+            autoCreate: true,
+            autoIndex: true,
         });
 
         isConnected = true;
