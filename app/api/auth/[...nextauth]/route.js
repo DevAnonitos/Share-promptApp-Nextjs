@@ -23,6 +23,7 @@ const handler = NextAuth({
             }
 
             session.user.id = sessionUser._id.toString();
+            sessionStorage.setItem('user', JSON.stringify(session.user));
 
             return session;
         },
@@ -37,11 +38,12 @@ const handler = NextAuth({
 
                 if(!userExists) {
                     console.log(`Creating new user: ${profile.email}`)
-                    await User.create({
+                    const newUser = await User.create({
                         email: profile.email,
                         username: profile.name.replace(" ", "").toLowerCase(),
                         image: profile.picture,
                     });
+                    console.log("New user created: ", newUser);
                 }else {
                     console.log(`User found in database: ${profile.email}`);
                 }
