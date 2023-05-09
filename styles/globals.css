@@ -162,6 +162,56 @@
   @apply bg-gradient-to-r from-green-400 to-green-500 bg-clip-text text-transparent;
 }
 
+/* Define the gradient colors for the text */
+.gradient-pink-green {
+  background: linear-gradient(45deg, #f06292, #00ff92);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-yellow-purple {
+  background: linear-gradient(45deg, #f9d423, #7221ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Define the text color theme classes */
+.text-theme-pink-green {
+  color: #f06292;
+}
+
+.text-theme-yellow-purple {
+  color: #f9d423;
+}
+
+/* Define the animation classes */
+@keyframes animate-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: animate-gradient 4s ease-in-out infinite;
+}
+
+/* Apply the gradient and text color theme to the div */
+.text-gradient {
+  @apply gradient-pink-green text-theme-pink-green;
+}
+
+.text-gradient-alt {
+  @apply gradient-yellow-purple text-theme-yellow-purple;
+}
+
+
 .blue_gradient {
   @apply bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent;
 }
