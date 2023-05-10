@@ -31,12 +31,22 @@ const Feed = () => {
         const response = await fetch("/api/prompt");
         const data = await response.json();
 
-        setAllPosts(false);
+        setAllPosts(data);
     };
 
     useEffect(() => {
         fetchPosts();
     },[]);
+
+    const filterPrompt = (searchtext) => {
+        const regex = new RegExp(searchtext, "i");
+        return allPosts.filter(
+            (item) =>
+                regex.test(item.creator.username) ||
+                regex.test(item.tag) ||
+                regex.test(item.prompt)
+        );
+    };
 
     const handleSearchChange = (e) => {
 
@@ -60,15 +70,19 @@ const Feed = () => {
             </form>
             {/* Prompt Card list */}
             {searchText ? (
-                <PromptCardList
-                    data={searchedResults}
-                    handleTagClick={handleTagClick}
-                />
+                <>
+                    <PromptCardList
+                        data={searchedResults}
+                        handleTagClick={handleTagClick}
+                    />
+                </>
             ) : (
-                <PromptCardList
-                    data={allPosts}
-                    handleTagClick={handleTagClick}
-                />
+                <>
+                    <PromptCardList
+                        data={allPosts}
+                        handleTagClick={handleTagClick}
+                    />
+                </>
             )}
         </section>
     );
