@@ -2,21 +2,48 @@
 
 import React, { useState, useEffect } from 'react';
 import PromptCard from "./PromptCard";
+import { findDOMNode } from 'react-dom';
 
 const PromptCardList = ({ data, handleTagClick }) => {
     return (
-        <div>
-
+        <div className='mt-16 prompt_layout'>
+            {data.map((post) => (
+                <PromptCard
+                    key={post._id}
+                    post={post}
+                    handleTagClick={handleTagClick}
+                />
+            ))}
         </div>
-    )
+    );
 };
 
 const Feed = () => {
+    // Fetch AllPosts
+    const [allPosts, setAllPosts] = useState([]);
 
     const [searchText, setSearchText] = useState("");
+    const [searchedResults, setSearchedResults] = useState([]);
+    const [searchTimeout, setSearchTimeout] = useState(null);
+
+    // Handle Logic state
+    const fetchPosts = async () => {
+        const response = await fetch("/api/prompt");
+        const data = await response.json();
+
+        setAllPosts(false);
+    };
+
+    useEffect(() => {
+        fetchPosts();
+    },[]);
 
     const handleSearchChange = (e) => {
 
+    };
+
+    const handleTagClick = (tagName) => {
+        setSearchText(tagName);
     };
 
     return (
@@ -31,6 +58,18 @@ const Feed = () => {
                     className='search_input peer'
                 />
             </form>
+            {/* Prompt Card list */}
+            {searchText ? (
+                <PromptCardList
+                    data={searchedResults}
+                    handleTagClick={handleTagClick}
+                />
+            ) : (
+                <PromptCardList
+                    data={allPosts}
+                    handleTagClick={handleTagClick}
+                />
+            )}
         </section>
     );
 };

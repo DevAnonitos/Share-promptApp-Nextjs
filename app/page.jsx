@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useEffect } from 'react';
-import Feed from "../components/Feed";
+import Feed from "../components/Feed"
 
 const page = () => {
 
@@ -26,9 +26,7 @@ const page = () => {
                     discover, create and share creative prompts
                 </p>
 
-                <div className={`feed ${showFeed ? 'feed--show' : ''}`}>
-                    <Feed />
-                </div>
+                <Feed />
             </section>
         </>
     );
