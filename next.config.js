@@ -12,6 +12,18 @@ const nextConfig = {
             ...config.experiments,
             topLevelAwait: true,
         }
+
+        // Enable source maps in development mode only
+        if (process.env.NODE_ENV === 'development') {
+            config.devtool = 'cheap-module-source-map';
+        }
+
+        // Disable source maps in production mode
+        if (process.env.NODE_ENV === 'production') {
+            config.devtool = false;
+            config.productionBrowserSourceMaps = false;
+        }
+        
         return config
     }
 }

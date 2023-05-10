@@ -33,19 +33,14 @@ const CreatePrompt = () => {
                 })
             });
 
+            if(response.ok) {
+                router.push("/")
+            }
 
-            toast.success('Post created successfully!', {
-                position: "bottom-right",
-                autoClose: 5000,
-                hideProgressBar: true,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-            });
+
         } catch (error) {
             console.log(error.message);
-            toast.success('Post created successfully!', {
+            toast.error('Post created fail!', {
                 position: "bottom-right",
                 autoClose: 5000,
                 hideProgressBar: true,
