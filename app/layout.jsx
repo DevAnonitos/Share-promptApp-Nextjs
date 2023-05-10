@@ -1,5 +1,6 @@
 import "../styles/globals.css";
 import { Navbar, Provider } from "@/components";
+import 'react-toastify/dist/ReactToastify.css';
 
 export const metadata = {
     title: "PromptApp",

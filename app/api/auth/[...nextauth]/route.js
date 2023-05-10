@@ -23,11 +23,10 @@ const handler = NextAuth({
             }
 
             session.user.id = sessionUser._id.toString();
-            sessionStorage.setItem('user', JSON.stringify(session.user));
 
             return session;
         },
-        async signIn({ profile }) {
+        async signIn({account, profile, user, credentials }) {
             try {
                 await connectToDB();
 
@@ -39,7 +38,7 @@ const handler = NextAuth({
                     console.log(`Creating new user: ${profile.email}`)
                     const newUser = await User.create({
                         email: profile.email,
-                        username: profile.name.replace(" ", "").toLowerCase(),
+                        username: profile.email.split("@")[0].replace(/\s+/g, "").toLowerCase(),
                         image: profile.picture,
                     });
                     console.log("New user created: ", newUser);
