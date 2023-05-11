@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import PromptCard from "./PromptCard";
-import { findDOMNode } from 'react-dom';
 
 const PromptCardList = ({ data, handleTagClick }) => {
     return (
@@ -54,6 +53,9 @@ const Feed = () => {
 
     const handleTagClick = (tagName) => {
         setSearchText(tagName);
+
+        const searchResult = filterPrompt(tagName)
+        setSearchedResults(searchResult);
     };
 
     return (
