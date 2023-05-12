@@ -4,8 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 const Navbar = () => {
 
@@ -37,7 +36,7 @@ const Navbar = () => {
                     />
                     <p className='logo_text'>PromptApp</p>
                 </Link>
-                
+
                 {/* Desktop navigation */}
                 <div className='sm:flex hidden'>
                     {session?.user ? (
