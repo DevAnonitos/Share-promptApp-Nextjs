@@ -34,21 +34,35 @@ const CreatePrompt = () => {
             });
 
             if(response.ok) {
-                router.push("/")
+                toast.success('🦄 Create prompt in success!', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: true,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    draggablePercent: 60,
+                });
+                router.push("/");
+            } else {
+                toast.error('🦄 Oops, Create prompt fail!', {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "light",
+                    draggablePercent: 60,
+                });
             }
 
 
         } catch (error) {
             console.log(error.message);
-            toast.error('Post created fail!', {
-                position: "bottom-right",
-                autoClose: 5000,
-                hideProgressBar: true,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-            });
         } finally {
             setSubmitting(false);
         }
