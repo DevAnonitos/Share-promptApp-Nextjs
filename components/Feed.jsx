@@ -48,7 +48,15 @@ const Feed = () => {
     };
 
     const handleSearchChange = (e) => {
+        clearTimeout(searchTimeout);
+        setSearchText(e.target.value);
 
+        setSearchTimeout(
+            setTimeout(( ) => {
+                const searchResult = filterPrompt(e.target.value);
+                setSearchedResults(searchResult);
+            }, 500)
+        )
     };
 
     const handleTagClick = (tagName) => {

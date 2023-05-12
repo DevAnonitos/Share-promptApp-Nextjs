@@ -32,7 +32,7 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
     };
 
     return (
-        <div className='prompt_card'>
+        <div className='prompt_card shadow-lg'>
             <div className='flex justify-between items-start gap-5'>
                 <div
                     className='flex-1 flex justify-start
