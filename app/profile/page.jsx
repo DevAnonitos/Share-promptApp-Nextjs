@@ -14,7 +14,7 @@ const MyProfile = () => {
     const [myPosts, setMyPosts] = useState([]);
 
     useEffect(() => {
-
+        
     }, []);
 
     const handleEdit = (post) => {
