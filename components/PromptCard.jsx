@@ -87,13 +87,13 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
                 <div className='mt-5 flex-center gap-4 border-t border-gray-100 pt-3'>
                     <p
                         className='font-inter text-sm
-                        green_gradient cursor-pointer border-2 py-2 px-4 rounded-lg border-gray-500'
+                        green_gradient cursor-pointer font-semibold'
                         onClick={handleEdit}
                     >
                         Edit
                     </p>
                     <p
-                        className='font-inter text-sm orange_gradient cursor-pointer'
+                        className='font-inter text-sm text-red-600 cursor-pointer font-semibold'
                         onClick={handleDelete}
                     >
                         Delete
