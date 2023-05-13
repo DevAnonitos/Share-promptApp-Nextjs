@@ -5,6 +5,8 @@ import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
 
 import { Profile } from '@/components';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const MyProfile = () => {
 
@@ -14,15 +16,46 @@ const MyProfile = () => {
     const [myPosts, setMyPosts] = useState([]);
 
     useEffect(() => {
-        
-    }, []);
+        const fetchPosts = async () => {
+            const response = await fetch(`/api/users/${session?.user.id}/posts`);
+            const data  = await response.json();
+
+            setMyPosts(data);
+        }
+
+        if(session?.user.id) fetchPosts();
+
+    }, [session?.user.id]);
 
     const handleEdit = (post) => {
         router.push(`/update-prompt?id=${post._id}`);
     };
 
     const handleDelete = async (post) => {
+        const hasConfirm = await confirm(
+            "Are you sure want to delete this prompt",
+            {
+                confirmationText: 'Delete',
+                cancellationText: 'Cancel',
+                title: 'Delete Confirmation'
+            }
+        );
 
+        if(hasConfirm) {
+            try {
+                await fetch(`/api/prompt/${post._id.toString()}`, {
+                    method: 'DELETE',
+                });
+
+                const filteredPosts = myPosts.filter((item) => item._id !== post._id);
+
+                toast.success('Post deleted successfully');
+                setMyPosts(filteredPosts);
+            } catch (error) {
+                console.log(error);
+                toast.error('Post deleted fail');
+            }
+        }
     };
 
     return (

@@ -3,13 +3,13 @@ import  PromptCard  from './PromptCard';
 
 const Profile = ({ name, desc, data , handleEdit, handleDelete }) => {
     return (
-        <section className='w-full'>
-            <h1 className='head_text text-center'>
+        <section className='w-full flex-center flex-col'>
+            <h1 className='head_text text-center flex flex-center items-center'>
                 <span className='blue_gradient'>
                     {name} Profile
                 </span>
             </h1>
-            <p className='desc text-left'>
+            <p className='desc text-center flex flex-center items-center'>
                 {desc}
             </p>
 
