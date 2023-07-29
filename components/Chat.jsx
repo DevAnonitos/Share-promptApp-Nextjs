@@ -6,8 +6,9 @@ const Chat = () => {
             initPayload={"/greet"}
             socketUrl={"http://localhost:5005"}
             socketPath={"/socket.io/"}
-            customData={{"language": "en"}} // arbitrary custom data. Stay minimal as this will be added to the socket
-            title={"RasaBot"}
+            customData={{"language": "en"}}
+            title={"BotChat"}
+            inputTextFieldHint={"Enter to chat with bot..."}
         />
     );
 };
