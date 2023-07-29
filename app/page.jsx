@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import Feed from "../components/Feed"
+import { Chat } from '@/components';
 
 const page = () => {
 
@@ -27,6 +28,7 @@ const page = () => {
                 </p>
 
                 <Feed />
+                <Chat />
             </section>
         </>
     );
