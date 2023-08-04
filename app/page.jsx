@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import Feed from "../components/Feed"
 import { Chat } from '@/components';
+import { ThemeProvider } from "styled-components";
+import { lightTheme, darkTheme, GlobalStyles } from "../configs/theme/ThemeConfig"
 
 const page = () => {
 
