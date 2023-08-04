@@ -11,7 +11,7 @@ export const darkTheme = {
     body: '#111',
     text: '#fff',
     toggleBorder: '#a6e22e',
-    background: '#111',
+    background: '#cddcc3',
 }
 
 export const GlobalStyles = createGlobalStyle`

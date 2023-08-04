@@ -25,9 +25,6 @@ const RootLayout = ({ children }) => {
                 <ThemeProvider theme={theme == 'light' ? lightTheme : darkTheme}>
                     <GlobalStyles />
                     <Provider>
-                        <div>
-                            {/* <div className="gradient" /> */}
-                        </div>
                         <main className="app">
                             <Navbar />
                             <ToastContainer />
