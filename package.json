@@ -15,7 +15,7 @@
     "axios": "^1.4.0",
     "bcrypt": "^5.1.0",
     "google-auth-library": "^8.8.0",
-    "mongodb": "^5.4.0",
+    "mongodb": "^5.8.0",
     "mongoose": "^7.3.3",
     "next": "13.4.1",
     "next-auth": "^4.22.1",
