@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
 
-import { Profile, Chat } from '@/components';
+import { Profile } from '@/components';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -67,7 +67,6 @@ const MyProfile = () => {
                 handleEdit={handleEdit}
                 handleDelete={handleDelete}
             />
-            <Chat />
         </div>
     );
 };
