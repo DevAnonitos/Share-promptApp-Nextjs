@@ -34,30 +34,10 @@ const CreatePrompt = () => {
             });
 
             if(response.ok) {
-                toast.success('🦄 Create prompt in success!', {
-                    position: "top-right",
-                    autoClose: 5000,
-                    hideProgressBar: true,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "light",
-                    draggablePercent: 60,
-                });
+                toast.success('🦄 Create prompt in success!');
                 router.push("/");
             } else {
-                toast.error('🦄 Oops, Create prompt fail!', {
-                    position: "top-right",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "light",
-                    draggablePercent: 60,
-                });
+                toast.error('🦄 Oops, Create prompt fail!');
             }
 
 
