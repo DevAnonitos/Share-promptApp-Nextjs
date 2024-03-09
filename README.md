@@ -41,11 +41,11 @@ Share prompt app is a simple web application based on Nextjs framework. With mod
 
 ## <a name="reference">🔗 Reference</a>
 
-- [Next.js] (https://nextjs.org/)
-- [React.js] (https://react.dev/)
-- [NextAuth.js] (https://next-auth.js.org/)
-- [JavaScript] (https://developer.mozilla.org/en-US/docs/Web/javascript)
-- [TailWind-CSS] (https://tailwindcss.com/)
-- [MongoDB] (https://www.mongodb.com/)
+- [Next.js](https://nextjs.org/)
+- [React.js](https://react.dev/)
+- [NextAuth.js](https://next-auth.js.org/)
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/javascript)
+- [TailWind-CSS](https://tailwindcss.com/)
+- [MongoDB](https://www.mongodb.com/)
 
 ## <a name="more">🚀 More</a>
