@@ -18,6 +18,13 @@
 5. 🚀 [More](#more)
 
 
-## <a name="introductino">🤖 Introduction</a>
+## <a name="introduction">🤖 Introduction</a>
 
 Share prompt app is a simple web application based on Nextjs framework. With modern UI/UX web app, share prompt app has more features with signin, signup, create post and view profile user.
+
+## <a name="tech-stack">⚙️ Tech Stack</a>
+- Nextjs 13.4
+- Next-auth
+- JavaScript
+- Tailwind CSS
+- MongoDB
