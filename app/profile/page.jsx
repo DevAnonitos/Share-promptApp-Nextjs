@@ -21,7 +21,7 @@ const MyProfile = () => {
             const data  = await response.json();
 
             setMyPosts(data);
-        }
+        };
 
         if(session?.user.id) fetchPosts();
 
@@ -38,7 +38,7 @@ const MyProfile = () => {
                 confirmationText: 'Delete',
                 cancellationText: 'Cancel',
                 title: 'Delete Confirmation'
-            }
+            },
         );
 
         if(hasConfirm) {
