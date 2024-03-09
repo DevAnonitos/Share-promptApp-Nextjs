@@ -37,6 +37,15 @@ Share prompt app is a simple web application based on Nextjs framework. With mod
 
 ## <a name="quick-start">🤸 Quick Start</a>
 
+Follow step by step to set up the project locally on your device.
+
+**Prerequisites** 
+
+Make sure that you have the following installed dependencies:
+
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/en)
+- [npm](https://www.npmjs.com/) (Node Package Manager)
 
 
 ## <a name="reference">🔗 Reference</a>
