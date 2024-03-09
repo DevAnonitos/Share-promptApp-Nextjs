@@ -7,11 +7,6 @@ const nextConfig = {
     images: {
         domains: ['lh3.googleusercontent.com'],
     },
-    logging: {
-        fetches: {
-            fullUrl: true,
-        },
-    },
     trailingSlash: true,
     webpack(config) {
         config.experiments = {
