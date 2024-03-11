@@ -61,7 +61,17 @@ Install the project dependencies by using npm:
 ```bash
 npm install
 ```
+Create a new file named `.env` in the root of your project and add api key in the following content:
 
+```env
+GOOGLE_ID=""
+GOOGLE_CLIENT_SECRET=""
+MONGODB_URI=""
+
+NEXTAUTH_URL="http://localhost:3000"
+NEXTAUTH_URL_INTERNAL="http://localhost:3000"
+NEXTAUTH_SECRET=
+```
 
 ## <a name="reference">🔗 Reference</a>
 
