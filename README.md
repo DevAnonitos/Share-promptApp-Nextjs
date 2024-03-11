@@ -54,6 +54,15 @@ https://github.com/NguyenBao23131/Share-promptApp-Nextjs.git
 cd share-prompt-ai
 ```
 
+**Installation**
+
+Install the project dependencies by using npm:
+
+```bash
+npm install
+```
+
+
 ## <a name="reference">🔗 Reference</a>
 
 - [Next.js](https://nextjs.org/)
