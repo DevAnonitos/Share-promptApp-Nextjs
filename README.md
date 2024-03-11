@@ -73,6 +73,14 @@ NEXTAUTH_URL_INTERNAL="http://localhost:3000"
 NEXTAUTH_SECRET=
 ```
 
+**Running the Project**
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000/](http://localhost:3000/) in your browser to view the project.
+
 ## <a name="reference">🔗 Reference</a>
 
 - [Next.js](https://nextjs.org/)
