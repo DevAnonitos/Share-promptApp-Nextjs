@@ -91,3 +91,12 @@ Open [http://localhost:3000/](http://localhost:3000/) in your browser to view th
 - [MongoDB](https://www.mongodb.com/)
 
 ## <a name="more">🚀 More</a>
+
+**Contact me**
+
+- [Facebook](https://www.facebook.com/baonguyenno1412)
+- [Fanpages](https://www.facebook.com/DevAnonitos/)
+- [Instagram](https://www.instagram.com/devanonitos/)
+- [Thread](https://www.threads.net/@devanonitos)
+- [Twitter](https://twitter.com/BaoNo1144)
+- [LinkedIn](www.linkedin.com/in/bảo-nguyễn-đức-gia-68284a270)
