@@ -47,6 +47,12 @@ Make sure that you have the following installed dependencies:
 - [Node.js](https://nodejs.org/en)
 - [npm](https://www.npmjs.com/) (Node Package Manager)
 
+**Clone this repository**
+
+```bash
+https://github.com/NguyenBao23131/Share-promptApp-Nextjs.git
+cd share-prompt-ai
+```
 
 ## <a name="reference">🔗 Reference</a>
 
