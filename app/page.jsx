@@ -17,7 +17,7 @@ const page = () => {
                     Discover & Share
                     <br className='max-md:hidden' />
                     <span className='orange_gradient text-center'>
-                        AI-Prompts GPT
+                        Generative AI-Prompts
                     </span>
                 </h1>
 
