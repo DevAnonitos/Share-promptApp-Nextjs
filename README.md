@@ -33,12 +33,14 @@ Share prompt app is a simple web application based on Nextjs framework. With mod
 
 ## <a name="features">📌 Features</a>
 
-👉 **SignIn Account**:
-👉 **SignOut Account**:
-👉 **Create Post**:
-👉 **Edit Post**:
-👉 **Delete Post**:
-👉 **Copy prompt**:
+- 👉 **SignIn Account**:
+- 👉 **SignOut Account**:
+- 👉 **Search Post by tag**: 
+- 👉 **Create Post, Edit Post and Delete Post**:
+- 👉 **Copy Prompt**:
+- 👉 **View Other Users ProfilePage**: 
+- 👉 **Google Authentication using NextAuth**:
+- 👉 **Responsive Layout Website**: 
 
 ## <a name="quick-start">🤸 Quick Start</a>
 
