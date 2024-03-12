@@ -83,12 +83,12 @@ Open [http://localhost:3000/](http://localhost:3000/) in your browser to view th
 
 ## <a name="reference">🔗 Reference</a>
 
-- [Next.js](https://nextjs.org/)
-- [React.js](https://react.dev/)
-- [NextAuth.js](https://next-auth.js.org/)
-- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/javascript)
-- [TailWind-CSS](https://tailwindcss.com/)
-- [MongoDB](https://www.mongodb.com/)
+- [Next.js](https://nextjs.org/) - learn about Next.js fullstack framework and API.
+- [React.js](https://react.dev/) - learn about concepts and examples of React library.
+- [NextAuth.js](https://next-auth.js.org/) - a library auth is available for developers.
+- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/javascript) - a programming language use for web developer.
+- [TailWind-CSS](https://tailwindcss.com/) - a frame work css is connivent to build style.
+- [MongoDB](https://www.mongodb.com/) - a non-sql is easy to use and scale your database.
 
 ## <a name="more">🚀 More</a>
 
