@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -160,7 +160,6 @@
   border: 2px solid black;
 }
 
-
 /* Apply the animation on hover */
 .black_btn:hover {
   animation: frame 0.5s ease-in-out forwards;
@@ -168,7 +167,7 @@
 
 
 .outline_btn {
-  @apply rounded-full border border-black bg-transparent py-1.5 px-5 text-black transition-all hover:bg-black hover:text-white text-center text-sm font-inter flex items-center justify-center;
+  @apply rounded-full border border-red-500 bg-transparent py-1.5 px-5 text-red-600 transition-all hover:bg-red-600 hover:text-white text-center text-sm font-inter flex items-center justify-center;
 }
 
 .head_text {
