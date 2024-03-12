@@ -106,7 +106,7 @@ Open [http://localhost:3000/](http://localhost:3000/) in your browser to view th
 
 **Contact me**
 
-- [![Facebook](https://scontent.fsgn8-4.fna.fbcdn.net/v/t39.30808-6/380700650_10162533193146729_2379134611963304810_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeE0iYuhWUrh01GZibU1oe0ktjWzO19RVKS2NbM7X1FUpDEIwor_GOMupWJhBBSo0HSYP2BnBiCluwkrdNH5jS4f&_nc_ohc=VxqkkNym-rMAX_WhLQ5&_nc_ht=scontent.fsgn8-4.fna&oh=00_AfAw8nEop90NXzD1_F-zZHDWxJf21q-TlzWa7HTM8pAI4w&oe=65F56BBE)](https://www.facebook.com/baonguyenno1412)
+- [Facebook](https://www.facebook.com/baonguyenno1412)
 - [Fanpages](https://www.facebook.com/DevAnonitos/)
 - [Instagram](https://www.instagram.com/devanonitos/)
 - [Thread](https://www.threads.net/@devanonitos)
