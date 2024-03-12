@@ -1,5 +1,9 @@
 <div align="center">
   <br />
+    <a href="https://youtu.be/oKIThIihv60" target="_blank">
+      <img src="https://drive.google.com/file/d/1UZe0cVnGX8yPFPzXUBLUXYMmBwdtOlSd/view?usp=sharing" alt="Project Banner">
+    </a>
+  <br />
 
   <div>
     <img src="https://img.shields.io/badge/-Javascript-black?style=for-the-badge&logoColor=white&logo=javascript&color=f9ca24" alt="typescript" />
