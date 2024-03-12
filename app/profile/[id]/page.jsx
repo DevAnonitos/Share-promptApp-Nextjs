@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { Profile } from '@/components';
 
-
 const UserProfile = ({ params }) => {
     const searchParams = useSearchParams();
     const userName = searchParams.get("username");

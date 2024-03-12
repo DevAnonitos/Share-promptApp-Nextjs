@@ -3,8 +3,12 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { signIn, signOut, useSession, getProviders } from "next-auth/react";
-
+import { 
+    signIn, 
+    signOut, 
+    useSession, 
+    getProviders 
+} from "next-auth/react";
 
 const Navbar = () => {
 
