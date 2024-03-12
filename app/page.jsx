@@ -1,6 +1,7 @@
 "use client"
+
 import React, { useState, useEffect } from 'react';
-import Feed from "../components/Feed"
+import { Feed } from '@/components';
 
 const page = () => {
 

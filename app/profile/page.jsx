@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation';
@@ -17,10 +17,14 @@ const MyProfile = () => {
 
     useEffect(() => {
         const fetchPosts = async () => {
-            const response = await fetch(`/api/users/${session?.user.id}/posts`);
-            const data  = await response.json();
-
-            setMyPosts(data);
+            try {
+                const response = await fetch(`/api/users/${session?.user.id}/posts`);
+                const data  = await response.json();
+    
+                setMyPosts(data);
+            } catch (error) {
+                console.error("Error fetching posts:", error);
+            }
         };
 
         if(session?.user.id) fetchPosts();

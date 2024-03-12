@@ -1,5 +1,5 @@
-import Prompt from "../../../../../models/prompt";
-import { connectToDB } from "../../../../../utils/database";
+import Prompt from "@/models/prompt";
+import { connectToDB } from "@/utils/database";
 
 export const GET = async (request, { params }) => {
     try {
@@ -14,6 +14,6 @@ export const GET = async (request, { params }) => {
         console.log(error);
         return new Response("Failed to fetch prompts created by user", {
             status: 500
-        })
+        });
     }
 };

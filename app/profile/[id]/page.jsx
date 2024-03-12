@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
-import Profile from "../../../components/Profile";
+import { Profile } from '@/components';
 
 
 const UserProfile = ({ params }) => {
@@ -13,10 +13,14 @@ const UserProfile = ({ params }) => {
 
     useEffect(() => {
         const fetchPosts = async () => {
-            const response = await fetch(`/api/users/${params?.id}/posts`);
-            const data = await response.json();
-
-            setUserPosts(data);
+            try {
+                const response = await fetch(`/api/users/${params?.id}/posts`);
+                const data = await response.json();
+    
+                setUserPosts(data);
+            } catch (error) {
+                console.error("Error fetching posts:", error);
+            }
         };
 
         if (params?.id) fetchPosts();
