@@ -79,6 +79,11 @@ NEXTAUTH_URL="http://localhost:3000"
 NEXTAUTH_URL_INTERNAL="http://localhost:3000"
 NEXTAUTH_SECRET=
 ```
+Caution
+
+> Note:
+- If you want to get key GOOGLE_ID and GOOGLE_CLIENT_SECRET, you should access the website [GoogleCloud](https://console.cloud.google.com/).
+- To have `NEXTAUTH_SECRET` please access the website [https://www.cryptool.org/](https://www.cryptool.org/en/cto/openssl) and type command `openssl rand -base64 32` to generate random private key.
 
 **Running the Project**
 
