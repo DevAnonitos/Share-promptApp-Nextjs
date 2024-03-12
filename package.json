@@ -14,6 +14,7 @@
     "autoprefixer": "10.4.14",
     "axios": "^1.6.0",
     "bcrypt": "^5.1.0",
+    "caniuse-lite": "^1.0.30001597",
     "google-auth-library": "^8.8.0",
     "mongodb": "^5.8.0",
     "mongoose": "^7.3.3",
