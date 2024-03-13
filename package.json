@@ -28,5 +28,9 @@
     "styled-components": "^6.0.7",
     "tailwindcss": "3.3.2",
     "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.42.1",
+    "@types/node": "^20.11.27"
   }
 }
