@@ -117,4 +117,3 @@ Open [http://localhost:3000/](http://localhost:3000/) in your browser to view th
 - [Thread](https://www.threads.net/@devanonitos)
 - [Twitter](https://twitter.com/BaoNo1144)
 
-![Static Badge](https://img.shields.io/badge/Facebook?style=social&logo=facebook&link=https%3A%2F%2Fwww.facebook.com%2Fbaonguyenno1412)
