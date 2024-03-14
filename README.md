@@ -37,14 +37,14 @@ Share prompt app is a simple web application based on Nextjs framework. With mod
 
 ## <a name="features">📌 Features</a>
 
-- 👉 <span style="color: blue;">**SignIn Account**</span>: Users can sign in to their accounts by using Google Authentication provider and gain access to the SharePromptApp features and functionalities.
-- 👉 <span style="color: blue;">**SignOut Account**</span>: Users have to sign out their account, terminating their session and ensuring their privacy and security information.
-- 👉 <span style="color: blue;">**Search Post by tag**</span>: 
-- 👉 <span style="color: blue;">**Create Post, Edit Post, and Delete Post**</span>:
-- 👉 <span style="color: blue;">**Copy Prompt**</span>:
-- 👉 <span style="color: blue;">**View Other Users ProfilePage**</span>: 
-- 👉 <span style="color: blue;">**Google Authentication using NextAuth**</span>:
-- 👉 <span style="color: blue;">**Responsive Layout Website**</span>:
+- 👉 **SignIn Account**: Users can sign in to their accounts by using Google Authentication provider and gain access to the SharePromptApp features and functionalities.
+- 👉 **SignOut Account**: Users have to sign out their account, terminating their session and ensuring their privacy and security information.
+- 👉 **Search Post by tag**: 
+- 👉 **Create Post, Edit Post and Delete Post**:
+- 👉 **Copy Prompt**:
+- 👉 **View Other Users ProfilePage**: 
+- 👉 **Google Authentication using NextAuth**:
+- 👉 **Responsive Layout Website**: 
 
 ## <a name="quick-start">🤸 Quick Start</a>
 
