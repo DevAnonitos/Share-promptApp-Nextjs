@@ -41,7 +41,7 @@ Share prompt app is a simple web application based on Nextjs framework. With mod
 - 👉 **SignOut Account**: Users have to sign out their account, terminating their session and ensuring their privacy and security information.
 - 👉 **Search Post by tag**: Allow users can search for their prompts on specific tags, it will return correct results to specific topics.
 - 👉 **Create Post, Edit Post and Delete Post**: Users can create new posts, edit existing posts, and delete posts they no longer want. This feature is useful for users to manage their posts.
-- 👉 **Copy Prompt**:
+- 👉 **Copy Prompt**: Users can copy prompts or contents of posts to share and paste them into the others place.
 - 👉 **View Other Users ProfilePage**: 
 - 👉 **Google Authentication using NextAuth**:
 - 👉 **Responsive Layout Website**: 
