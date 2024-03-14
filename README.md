@@ -111,7 +111,8 @@ Open [http://localhost:3000/](http://localhost:3000/) in your browser to view th
 
 **Contact me**
 
-- [Facebook](https://www.facebook.com/baonguyenno1412)
+- [Facebook](https://www.facebook.com/baonguyenno1412) <img alt="Static Badge" src="https://img.shields.io/badge/Facebook?style=social&logo=facebook">
+
 - [Fanpages](https://www.facebook.com/DevAnonitos/)
 - [Instagram](https://www.instagram.com/devanonitos/)
 - [Thread](https://www.threads.net/@devanonitos)
