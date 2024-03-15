@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "git add . && git commit -m 'update:Add->UpdateCode' && git push"
   },
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
