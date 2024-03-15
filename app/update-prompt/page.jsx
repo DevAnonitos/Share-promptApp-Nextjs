@@ -46,7 +46,8 @@ const UpdatePrompt = () => {
                 body: JSON.stringify({
                     prompt: post.prompt,
                     tag: post.tag,
-                })
+                }),
+                cache: "no-store",
             });
 
             if(response.ok) {

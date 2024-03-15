@@ -13,7 +13,9 @@ const UserProfile = ({ params }) => {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const response = await fetch(`/api/users/${params?.id}/posts`);
+                const response = await fetch(`/api/users/${params?.id}/posts`, {
+                    next: { revalidate: 60 },
+                });
                 const data = await response.json();
     
                 setUserPosts(data);
