@@ -65,8 +65,9 @@ const Navbar = () => {
                                     src={session?.user.image}
                                     width={37}
                                     height={37}
-                                    className='rounded-full ring-2 bottom-2'
+                                    className='rounded-full border-2 border-gray-700 bottom-2'
                                     alt='profile'
+                                    priority
                                 />
                             </Link>
                         </div>
