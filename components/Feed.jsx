@@ -28,7 +28,9 @@ const Feed = () => {
     // Handle Logic state
     const fetchPosts = async () => {
         try {
-            const response = await fetch("/api/prompt");
+            const response = await fetch("/api/prompt", { 
+                next: { revalidate: 60 }
+            });
             const data = await response.json();
             setAllPosts(data);
         } catch (error) {
