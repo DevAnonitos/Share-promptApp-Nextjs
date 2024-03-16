@@ -1,0 +1,26 @@
+version: '2.24.3'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: SharePromptAIApp
+
+    ports:
+      - 3000:3000
+    develop:
+      watch:
+        - path: ./package.json
+          action: rebuild
+        - path: ./next.config.js
+          action: rebuild
+        - path: ./package-lock.json
+        - path: .
+          target: /app
+          action: sync
+
+    volumes:
+      - .:/app
+      - /app/node_modules
