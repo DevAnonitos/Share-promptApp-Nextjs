@@ -5,7 +5,15 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/NguyenBao23131/Share-promptApp-Nextjs.git",
-    "info": "The project is build base on Next.js 13.4 and platform-specific features are available"
+    "info": {
+      "name": "Share-promptApp-Nextjs",
+      "description": "The project is build based on Next.js 13.4 framework and provides more advanced features",
+      "homepage": "https://github.com/NguyenBao23131/Share-promptApp-Nextjs",
+      "bugs": {
+        "url": "https://github.com/NguyenBao23131/Share-promptApp-Nextjs/issues"
+      },
+      "license": "MIT"
+    }
   },
   "author": "DevAnonitos",
   "license": "MIT",
