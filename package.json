@@ -1,6 +1,14 @@
 {
   "name": "share-prompt-ai",
   "version": "0.1.0",
+  "description": "Build the project SharePromptApp website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NguyenBao23131/Share-promptApp-Nextjs.git",
+    "info": "The project is build base on Next.js 13.4 and platform-specific features are available"
+  },
+  "author": "DevAnonitos",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "next dev",
