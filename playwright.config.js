@@ -1,5 +1,6 @@
 // @ts-check
 const { defineConfig, devices } = require('@playwright/test');
+const path  = require("path")
 
 /**
  * Read environment variables from file.
@@ -7,11 +8,17 @@ const { defineConfig, devices } = require('@playwright/test');
  */
 // require('dotenv').config();
 
-/**
- * @see https://playwright.dev/docs/test-configuration
+// Create variables env file
+
+const PORT = process.env.PORT || 3000;
+const baseURL = `http://localhost:${PORT}`;
+
+/**@see https://playwright.dev/docs/test-configuration
  */
 module.exports = defineConfig({
-  testDir: './tests',
+  //timeout per test
+  timeout: 30 * 1000,
+  testDir: path.join(__dirname, 'e2e'),
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
