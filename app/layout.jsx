@@ -1,6 +1,5 @@
-"use client"
+"use client";
 
-import { useState } from "react";
 import "../styles/globals.css";
 import { Navbar, Provider } from "@/components";
 import { ToastContainer } from 'react-toastify';

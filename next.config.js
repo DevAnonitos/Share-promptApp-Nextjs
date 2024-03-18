@@ -15,7 +15,7 @@ const nextConfig = {
 
         // Enable source maps in development mode only
         if (process.env.NODE_ENV === 'development') {
-            config.devtool = 'cheap-module-source-map';
+            config.devtool = 'eval-source-map';
         }
 
         // Disable source maps in production mode
