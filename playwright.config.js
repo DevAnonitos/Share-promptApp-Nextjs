@@ -18,7 +18,7 @@ const baseURL = `http://localhost:${PORT}`;
 module.exports = defineConfig({
   //timeout per test
   timeout: 30 * 1000,
-  testDir: path.join(__dirname, 'e2e'),
+  testDir: path.join(__dirname, './e2e'),
   // Expected output
   outputDir: "test-results",
   /* Run tests in files in parallel */
