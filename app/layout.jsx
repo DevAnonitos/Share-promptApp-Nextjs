@@ -6,10 +6,10 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
-export const metadata = {
-    title: "PromptApp",
-    description: "Discover & Share AI Prompts",
-};
+// export const metadata = {
+//     title: "PromptApp",
+//     description: "Discover & Share AI Prompts",
+// };
 
 const RootLayout = ({ children }) => {
     return(
