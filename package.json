@@ -15,8 +15,18 @@
       "license": "MIT"
     }
   },
-  "author": "DevAnonitos",
+  "author": "Nguyen Duc Gia Bao",
   "license": "MIT",
+  "keywords": [
+    "next.js",
+    "react.js",
+    "javascript",
+    "mongodb",
+    "tailwindcss",
+    "web development",
+    "front-end",
+    "back-end"
+  ],
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -50,5 +60,9 @@
   "devDependencies": {
     "@playwright/test": "^1.42.1",
     "@types/node": "^20.11.27"
+  },
+  "engines": {
+    "node": ">18.17.0",
+    "npm": "9.6.5"
   }
 }
