@@ -33,7 +33,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress"
   },
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
