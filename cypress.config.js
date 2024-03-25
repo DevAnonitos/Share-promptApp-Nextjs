@@ -14,12 +14,7 @@ module.exports = defineConfig({
     devServer: {
       framework: "next",
       bundler: "webpack",
-      // webpackConfig: [
-      //   new NormalModuleReplacementPlugin(
-      //     /next\/image/,
-      //     require.resolve(path.join(__dirname, 'cypress', 'mocks', 'next', 'image')),
-      //   ),
-      // ],
+      
     },
   },
 });
