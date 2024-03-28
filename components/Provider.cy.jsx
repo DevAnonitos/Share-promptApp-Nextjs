@@ -1,5 +1,6 @@
 import React from 'react'
 import Provider from './Provider'
+import { SessionProvider } from 'next-auth/react';
 
 describe('<Provider />', () => {
   it('renders', () => {
