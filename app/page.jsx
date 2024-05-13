@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Feed } from '@/components';
 
-const page = () => {
+const HomePage = () => {
 
     const [showFeed, setShowFeed] = useState(false);
 
@@ -33,4 +33,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default HomePage;
