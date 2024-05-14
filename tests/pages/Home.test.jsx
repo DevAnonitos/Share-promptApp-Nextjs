@@ -1,6 +1,6 @@
 import React from "react";
 import HomePage from "@/app/page";
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 
 
 jest.mock('@/components/Feed', () => ({
@@ -18,7 +18,7 @@ describe('HomePage', () => {
     
   })
 
-  it('displays the description text', () => {
+  it('should render the description text', () => {
     const { getByText } = render(<HomePage />);
     expect(
       getByText(/PromptApp is an open-source AI prompting tool for modern world to discover, create and share creative prompts./)
