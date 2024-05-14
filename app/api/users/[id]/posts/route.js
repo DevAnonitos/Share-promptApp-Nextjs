@@ -5,6 +5,12 @@ export const GET = async (request, { params }) => {
     try {
         await connectToDB();
 
+        if(!params || !params.id) {
+            return new Response("UserId is missing", {
+                status: 400,
+            });
+        }
+
         const prompts = await Prompt.find({ creator: params.id }).populate("creator");
 
         return new Response(JSON.stringify(prompts), {
