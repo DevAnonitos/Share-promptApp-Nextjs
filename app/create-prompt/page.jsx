@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 
@@ -11,7 +11,13 @@ import 'react-toastify/dist/ReactToastify.css';
 const CreatePrompt = () => {
 
     const router = useRouter();
-    const { data: session } = useSession();
+    const { data: session, status } = useSession();
+
+    useEffect(() => {
+        if(status === "unauthenticated") {
+            router.push("/");
+        }
+    }, [status, router]);
 
     const [submitting, setSubmitting] = useState(false);
     const [post, setPost] = useState({
@@ -46,6 +52,10 @@ const CreatePrompt = () => {
         } finally {
             setSubmitting(false);
         }
+    }
+
+    if(status === "loading") {
+        return <div>Loading...</div>;
     }
 
     return (
