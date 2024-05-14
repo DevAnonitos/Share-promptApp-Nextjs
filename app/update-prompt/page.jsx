@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { useSession } from 'next-auth/react';
 import Form from "../../components/Form";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -11,6 +12,14 @@ const UpdatePrompt = () => {
     const router = useRouter();
     const searchParams = useSearchParams();
     const promptId = searchParams.get("id");
+
+    const { status } = useSession();
+
+    useEffect(() => {
+        if(status === "unauthenticated") {
+            router.push("/");
+        }
+    }, [status, router]);
 
     const [post, setPost] = useState({
         prompt: "",
@@ -63,6 +72,11 @@ const UpdatePrompt = () => {
             setSubmitting(false);
         }
     }
+
+    if(status === "loading") {
+        return <div>Loading...</div>;
+    }
+
     return (
         <div>
             <Form
