@@ -1,11 +1,11 @@
 import { render, screen } from "@testing-library/react";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
-import CreatePrompt from "@/app/create-prompt/page"; // Assuming path to CreatePrompt
+import CreatePrompt from "@/app/create-prompt/page"; 
 
 // Mock dependencies with improved clarity
 jest.mock('next/navigation', () => ({
-  useRouter: jest.fn().mockReturnValue({ push: jest.fn() }), // Mock router with push function
+  useRouter: jest.fn().mockReturnValue({ push: jest.fn() }), 
 }));
 
 jest.mock("next-auth/react", () => ({
@@ -21,15 +21,14 @@ describe("CreatePromptPage", () => {
       status: 'authenticated',
     });
 
-    // Mock router (optional, if needed in your test assertions)
+    
     const router = jest.fn();
-    render(<CreatePrompt router={router} />); // Pass mocked router
+    render(<CreatePrompt router={router} />); 
 
-    // Assertions for authenticated case
     try {
-      expect(screen.getByRole('form')).toBeInTheDocument(); // Assert form presence
+      expect(screen.getByRole('form')).toBeInTheDocument(); 
     } catch (error) {
-      console.error('Error in assertion:', error.message); //
+      console.error('Error in assertion:', error.message); 
     }
   });
 
