@@ -13,6 +13,9 @@ log
 # testing
 /coverage
 
+/.dix
+/.vscode
+
 # next.js
 /.next/
 /out/
