@@ -2,6 +2,7 @@ import axios from "axios";
 import MockAdapter from 'axios-mock-adapter';
 
 describe('API', () => {
+  // status 200 ->
     it('should make a successful GET request to localhost', async () => {
       const mock = new MockAdapter(axios);
 
@@ -13,30 +14,44 @@ describe('API', () => {
       expect(response.status).toBe(200);
       expect(response.data).toEqual(responseData);
     });
-    
-    it("should make a fail GET request to localhost", async () => {
+    //status 400->
+    it("should make a not-found GET request to localhost", async () => {
       const mock = new MockAdapter(axios);
 
-      mock.onGet("http://localhost/3000").reply(500)
+      mock.onGet("http://localhost:3000").reply(404)
 
       try {
-        await axios.get("http://localhost/3000")
+        await axios.get(" http://localhost:3000")
+        expect(true).toBe(false)
+      } catch (error) {
+        expect(error.response.status).toBe(404);
+      }
+    })
+    //status 500 ->
+    it("should make a server-error GET request to localhost", async () => {
+      const mock = new MockAdapter(axios);
+
+      mock.onGet("http://localhost:3000").reply(500)
+
+      try {
+        await axios.get("http://localhost:3000")
         expect(true).toBe(false)
       } catch (error) {
         expect(error.response.status).toBe(500);
       }
     })
 
-    it("should make a not-found GET request to localhost", async () => {
+    it("should make a bad-gateway GET request to localhost", async () => {
       const mock = new MockAdapter(axios);
 
-      mock.onGet("http://localhost/3000").reply(404)
+      mock.onGet("http://localhost:3000").reply(502);
 
       try {
-        await axios.get("http://localhost/3000")
-        expect(true).toBe(false)
+        await axios.get("http://localhost:3000");
+        expect(true).toBe(false);
       } catch (error) {
-        expect(error.response.status).toBe(404);
+        expect(error.response.status).toBe(502);
       }
     })
+
   });
