@@ -1,7 +1,8 @@
 import axios from "axios";
 import MockAdapter from 'axios-mock-adapter';
+import { describe } from "node:test";
 
-describe('API', () => {
+describe('API status code', () => {
   // status 200 ->
     it('should make a successful GET request to localhost', async () => {
       const mock = new MockAdapter(axios);
@@ -27,6 +28,20 @@ describe('API', () => {
         expect(error.response.status).toBe(404);
       }
     })
+
+    it("should make a forbiden GET request to localhost", async () => {
+      const mock = new MockAdapter(axios);
+
+      mock.onGet("http://localhost:3000").reply(403);
+    
+      try {
+        await axios.get("http://localhost:3000");
+        expect(true).toBe(false);
+      } catch (error) {
+        expect(error.response.status).toBe(403);
+      }
+    })
+
     //status 500 ->
     it("should make a server-error GET request to localhost", async () => {
       const mock = new MockAdapter(axios);
@@ -53,5 +68,4 @@ describe('API', () => {
         expect(error.response.status).toBe(502);
       }
     })
-
   });
