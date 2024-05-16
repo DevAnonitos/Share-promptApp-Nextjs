@@ -3,7 +3,6 @@ import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import CreatePrompt from "@/app/create-prompt/page"; 
 
-// Mock dependencies with improved clarity
 jest.mock('next/navigation', () => ({
   useRouter: jest.fn().mockReturnValue({ push: jest.fn() }), 
 }));
@@ -15,13 +14,12 @@ jest.mock("next-auth/react", () => ({
 describe("CreatePromptPage", () => {
 
   it('should render the prompt form (authenticated)', () => {
-    // Mock session data
+    
     jest.mocked(useSession).mockReturnValue({
       data: { user: { id: 1, name: 'John Doe' } },
       status: 'authenticated',
     });
 
-    
     const router = jest.fn();
     render(<CreatePrompt router={router} />); 
 
@@ -38,9 +36,9 @@ describe("CreatePromptPage", () => {
       status: 'unauthenticated',
     });
 
-    const router = jest.fn(); // Mock router for redirect assertion
-    render(<CreatePrompt router={router} />); // Ensure router prop is passed
+    const router = jest.fn(); 
+    render(<CreatePrompt router={router} />); 
 
-    expect(router.push)// Assert redirect
+    expect(router.push)
   });
 });
