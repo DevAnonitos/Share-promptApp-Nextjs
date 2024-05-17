@@ -1,6 +1,5 @@
 import axios from "axios";
 import MockAdapter from 'axios-mock-adapter';
-import { describe } from "node:test";
 
 describe('API status code', () => {
   // status 200 ->
@@ -82,3 +81,30 @@ describe('API status code', () => {
       }
     })
   });
+
+describe("Test performance localhost", () => {
+  it("should simulate some load on localhost", async () => {
+    const numRequests = 310; 
+    const startTime = performance.now();
+
+    const tasks = [];
+    for (let i = 0; i < numRequests; i++) {
+      tasks.push(async () => {
+        try {
+          const response = await axios.get("http://localhost:3000");
+          expect(response.status).toBe(200)
+        } catch (error) {
+          console.error("Error during request:", error);
+        }
+      });
+    }
+
+    await Promise.all(tasks.map(fn => fn()));
+
+    const endTime = performance.now();
+    const elapsedTime = endTime - startTime;
+
+    console.log("All", numRequests, "requests completed in", elapsedTime, "ms");
+    expect(elapsedTime).toBeLessThan(5000); 
+  })
+})
