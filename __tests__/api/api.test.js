@@ -1,5 +1,6 @@
 import axios from "axios";
 import MockAdapter from 'axios-mock-adapter';
+import { memoryUsage } from "process";
 
 describe('API status code', () => {
   // status 200 ->
@@ -107,4 +108,29 @@ describe("Test performance localhost", () => {
     console.log("All", numRequests, "requests completed in", elapsedTime, "ms");
     expect(elapsedTime).toBeLessThan(5000); 
   })
+
+  test("should not have significant memory increase during load", async () => {
+    const numRequests = 100;
+    const initialUsage = memoryUsage();
+  
+    const tasks = [];
+    for (let i = 0; i < numRequests; i++) {
+      tasks.push(async () => {
+        try {
+          const response = await axios.get("http://localhost:3000");
+          expect(response.status).toBe(200)
+        } catch (error) {
+          console.error("Error during request:", error);
+        }
+      });
+    }
+  
+    await Promise.all(tasks.map(fn => fn()));
+  
+    const finalUsage = memoryUsage();
+    const memoryDiff = finalUsage.heapUsed - initialUsage.heapUsed;
+    console.log("Total memory usage is " + memoryDiff)
+  
+    expect(memoryDiff).toBeLessThan(1000000); // Adjust threshold in bytes
+  });
 })
