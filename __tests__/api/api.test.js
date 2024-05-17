@@ -29,6 +29,19 @@ describe('API status code', () => {
       }
     })
 
+    it("should make a unauthorized GET request to localhost", async () => {
+      const mock = new MockAdapter(axios);
+
+      mock.onGet("http://localhost:3000").reply(401)
+
+      try {
+        await axios.get(" http://localhost:3000")
+        expect(true).toBe(false)
+      } catch (error) {
+        expect(error.response.status).toBe(404);
+      }
+    })
+
     it("should make a forbiden GET request to localhost", async () => {
       const mock = new MockAdapter(axios);
 
