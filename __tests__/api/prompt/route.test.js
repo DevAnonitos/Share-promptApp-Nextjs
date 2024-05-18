@@ -11,6 +11,7 @@ describe('API Prompt', () => {
     const data = await res.json();
     console.log(data);
     expect(data).toBeDefined();
+    expect(data).toMatchSnapshot()
   })
 
   it('should [GET]: response data as JSON from API Route', async () => {
@@ -27,11 +28,13 @@ describe('API Prompt', () => {
     console.log(data);
     expect(res.status).toEqual(500); 
     expect(data).toBeDefined();
+    expect(data).toMatchSnapshot()
   })
 
   it("should Response status code is 200", async () => {
     const response = await fetch(apiUrl);
     expect(response.status).toBe(200);
+    expect(response.status).toMatchSnapshot()
   })
 
   it("should Response has the required fields", async () => {
@@ -39,6 +42,8 @@ describe('API Prompt', () => {
     const responseData = await response.json();
 
     expect(Array.isArray(responseData)).toBe(true);
+    expect(Array.isArray(responseData)).toMatchSnapshot()
     expect(response.headers.get('Content-Type')).toContain('text/plain');
+    expect(response.headers.get('Content-Type')).toMatchSnapshot()
   })
 });
