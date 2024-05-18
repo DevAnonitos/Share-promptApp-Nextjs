@@ -10,7 +10,7 @@ describe('API Prompt', () => {
     const res = await fetch(apiUrl);
     const data = await res.json();
     console.log(data);
-    expect(data).toBeDefined();
+    expect(data).toBeDefined()
     expect(data).toMatchSnapshot()
   })
 
@@ -19,7 +19,9 @@ describe('API Prompt', () => {
     const data = await res.json();
     console.log(data);
     expect(res.status).toEqual(200); 
+    expect(res.status).toMatchSnapshot()
     expect(data).toBeDefined();
+    expect(data).toMatchSnapshot()
   });
 
   it("should [GET]: a fail response data as JSON from API Route", async () => {
