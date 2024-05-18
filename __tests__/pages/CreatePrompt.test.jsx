@@ -39,6 +39,6 @@ describe("CreatePromptPage", () => {
     const router = jest.fn(); 
     render(<CreatePrompt router={router} />); 
 
-    expect(router.push)
+    expect(router.push).toMatchSnapshot();
   });
 });
