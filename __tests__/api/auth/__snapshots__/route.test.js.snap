@@ -11,3 +11,15 @@ exports[`API Authentication should return a data json from API auth routes 1`] =
   },
 }
 `;
+
+exports[`API Authentication should return a status 200 from API auth routes 1`] = `
+{
+  "google": {
+    "callbackUrl": "http://localhost:3000/api/auth/callback/google",
+    "id": "google",
+    "name": "Google",
+    "signinUrl": "http://localhost:3000/api/auth/signin/google",
+    "type": "oauth",
+  },
+}
+`;

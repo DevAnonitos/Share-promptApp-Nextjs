@@ -13,4 +13,12 @@ describe("API Authentication", () => {
     expect(data).toBeDefined();
     expect(data).toMatchSnapshot()
   })
+
+  it("should return a status 200 from API auth routes", async () => {
+    const res = await fetch(baseUrl);
+    const data = await res.json();
+    console.log(data);
+    expect(res.status).toBe(200);
+    expect(data).toMatchSnapshot()
+  })
 })
