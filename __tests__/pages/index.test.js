@@ -12,4 +12,4 @@ describe('Page Imports', () => {
         expect(UpdatePrompt).toBeDefined()
         expect(UserProfile).toBeDefined()
     });
-  });
+});

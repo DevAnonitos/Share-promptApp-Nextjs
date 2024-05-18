@@ -13,8 +13,8 @@ describe('HomePage', () => {
   it("should render a HomePage Header text", () => {
     render(<HomePage />)
   
-    expect(screen.getAllByText("Discover & Share"))
-    expect(screen.getAllByText("Generative AI-Prompts"))
+    expect(screen.getAllByText("Discover & Share")).toMatchSnapshot();
+    expect(screen.getAllByText("Generative AI-Prompts")).toMatchSnapshot();
     
   })
 
@@ -28,6 +28,6 @@ describe('HomePage', () => {
   it("should render the Feed Component", async () => {
     render(<HomePage />)
 
-    expect(screen.getByTestId('feed-mock'))
+    expect(screen.getByTestId('feed-mock')).toMatchSnapshot();
   })
 })

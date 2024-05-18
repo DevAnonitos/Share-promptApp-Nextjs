@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomePage should render a HomePage Header text 1`] = `
+[
+  <h1
+    class="head_text text-center "
+  >
+    Discover & Share
+    <br
+      class="max-md:hidden"
+    />
+    <span
+      class="orange_gradient text-center"
+    >
+      Generative AI-Prompts
+    </span>
+  </h1>,
+]
+`;
+
+exports[`HomePage should render a HomePage Header text 2`] = `
+[
+  <span
+    class="orange_gradient text-center"
+  >
+    Generative AI-Prompts
+  </span>,
+]
+`;
+
+exports[`HomePage should render the Feed Component 1`] = `
+<div
+  data-testid="feed-mock"
+>
+  Mocked Feed
+</div>
+`;

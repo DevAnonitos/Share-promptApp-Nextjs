@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page Snapshots should match HomePage snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="w-full flex-center flex-col"
+  >
+    <h1
+      class="head_text text-center "
+    >
+      Discover & Share
+      <br
+        class="max-md:hidden"
+      />
+      <span
+        class="orange_gradient text-center"
+      >
+        Generative AI-Prompts
+      </span>
+    </h1>
+    <p
+      class="desc text-center"
+    >
+      PromptApp is an open-source AI prompting tool for modern world to discover, create and share creative prompts.
+    </p>
+    <section
+      class="feed"
+    >
+      <form
+        class="relative w-full flex-center"
+      >
+        <input
+          class="search_input peer"
+          placeholder="Search for a tag or a username..."
+          required=""
+          type="text"
+          value=""
+        />
+      </form>
+      <div
+        class="mt-16 prompt_layout"
+      />
+    </section>
+  </section>
+</DocumentFragment>
+`;
