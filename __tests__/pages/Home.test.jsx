@@ -23,6 +23,9 @@ describe('HomePage', () => {
     expect(
       getByText(/PromptApp is an open-source AI prompting tool for modern world to discover, create and share creative prompts./)
     ).toBeInTheDocument();
+    expect(
+      getByText(/PromptApp is an open-source AI prompting tool for modern world to discover, create and share creative prompts./)
+    ).toMatchSnapshot();
   });
 
   it('should match the snapshot', () => {

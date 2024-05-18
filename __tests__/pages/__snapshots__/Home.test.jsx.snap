@@ -67,3 +67,11 @@ exports[`HomePage should render the Feed Component 1`] = `
   Mocked Feed
 </div>
 `;
+
+exports[`HomePage should render the description text 1`] = `
+<p
+  class="desc text-center"
+>
+  PromptApp is an open-source AI prompting tool for modern world to discover, create and share creative prompts.
+</p>
+`;

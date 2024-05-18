@@ -1,5 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Page Imports should import all Pages without errors by snapShot 1`] = `[Function]`;
+
+exports[`Page Imports should import all Pages without errors by snapShot 2`] = `[Function]`;
+
+exports[`Page Imports should import all Pages without errors by snapShot 3`] = `[Function]`;
+
+exports[`Page Imports should import all Pages without errors by snapShot 4`] = `[Function]`;
+
+exports[`Page Imports should import all Pages without errors by snapShot 5`] = `[Function]`;
+
 exports[`Page Snapshots should match HomePage snapshot 1`] = `
 <DocumentFragment>
   <section

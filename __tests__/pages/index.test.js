@@ -12,4 +12,12 @@ describe('Page Imports', () => {
         expect(UpdatePrompt).toBeDefined()
         expect(UserProfile).toBeDefined()
     });
+
+    it('should import all Pages without errors by snapShot', () => {
+        expect(HomePage).toMatchSnapshot()
+        expect(CreatePrompt).toMatchSnapshot()
+        expect(MyProfile).toMatchSnapshot()
+        expect(UpdatePrompt).toMatchSnapshot()
+        expect(UserProfile).toMatchSnapshot()
+    });
 });
