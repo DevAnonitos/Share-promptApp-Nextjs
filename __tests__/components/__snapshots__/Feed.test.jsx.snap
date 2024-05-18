@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeedComponent should render the Search Field Text 1`] = `
+<input
+  class="search_input peer"
+  placeholder="Search for a tag or a username..."
+  required=""
+  type="text"
+  value=""
+/>
+`;
