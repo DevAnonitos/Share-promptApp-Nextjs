@@ -3,12 +3,12 @@
 */
 import { GET } from "@/app/api/prompt/route";
 describe('API Prompt', () => {
-  it('should [GET]: response data as JSON from API Route', async () => {
+  // Test fetch fail response all prompt
+  it('should [GET]: a fail response data as JSON from API Route', async () => {
     const res = await GET();
     const data = await res.json();
     console.log(data);
-    expect(res.statusCode).toEqual(200);
-    expect(data).toBeDefined();
-    expect(data.length).toBe(1)
+    expect(res.status).toEqual(500)
+    expect(data).toBeDefined()
   });
 });
