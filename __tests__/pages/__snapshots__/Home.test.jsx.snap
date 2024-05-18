@@ -1,5 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`HomePage should match the snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="w-full flex-center flex-col"
+  >
+    <h1
+      class="head_text text-center "
+    >
+      Discover & Share
+      <br
+        class="max-md:hidden"
+      />
+      <span
+        class="orange_gradient text-center"
+      >
+        Generative AI-Prompts
+      </span>
+    </h1>
+    <p
+      class="desc text-center"
+    >
+      PromptApp is an open-source AI prompting tool for modern world to discover, create and share creative prompts.
+    </p>
+    <div
+      data-testid="feed-mock"
+    >
+      Mocked Feed
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
 exports[`HomePage should render a HomePage Header text 1`] = `
 [
   <h1

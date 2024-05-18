@@ -25,6 +25,11 @@ describe('HomePage', () => {
     ).toBeInTheDocument();
   });
 
+  it('should match the snapshot', () => {
+    const { asFragment } = render(<HomePage />);
+    expect(asFragment()).toMatchSnapshot();
+});
+
   it("should render the Feed Component", async () => {
     render(<HomePage />)
 
