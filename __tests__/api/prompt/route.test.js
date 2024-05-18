@@ -3,33 +3,22 @@
 */
 import { GET } from "@/app/api/prompt/route";
 
-// jest.mock('@/libs/models/prompt'); 
-
-// export const mockDatabase = {
-//   connect: jest.fn().mockResolvedValueOnce(), // Mock successful connection
-//   find: jest.fn(), // Mock find method for queries
-// };
-
-// export const connectToDB = async () => {
-//   await mockDatabase.connect(); // Use mocked connection
-// };
-
 describe('API Prompt', () => {
-  // Test fetch fail response all prompt
-  it('should [GET]: a fail response data as JSON from API Route', async () => {
-    // mockDatabase.connect.mockResolvedValueOnce();
+  const apiUrl = 'http://localhost:3000/api/prompt';
 
-    // // Mock Prompt.find to return expected data (replace with your structure)
-    // const mockFind = jest.fn().mockResolvedValueOnce([{ id: 1, name: "Prompt 1" }]);
-    // Prompt.find = mockFind; 
+  it("should return data json from API Prompt", async () => {
+    const res = await fetch(apiUrl);
+    const data = await res.json();
+    console.log(data);
+    expect(data).toBeDefined();
+  })
 
-    // const res = await GET();
-    // const data = await res.json();
-
-    // expect(res.status).toEqual(200); // Expect a successful response (200)
-    // expect(data).toBeDefined();
-    // expect(data.length).toBe(1); //
-    
+  it('should [GET]: response data as JSON from API Route', async () => {
+    const res = await GET();
+    const data = await res.json();
+    console.log(data);
+    expect(res.status).toEqual(200); 
+    expect(data).toBeDefined();
   });
 
   it("should [GET]: a fail response data as JSON from API Route", async () => {
@@ -40,4 +29,16 @@ describe('API Prompt', () => {
     expect(data).toBeDefined();
   })
 
+  it("should Response status code is 200", async () => {
+    const response = await fetch(apiUrl);
+    expect(response.status).toBe(200);
+  })
+
+  it("should Response has the required fields", async () => {
+    const response = await fetch(apiUrl);
+    const responseData = await response.json();
+
+    expect(Array.isArray(responseData)).toBe(true);
+    expect(response.headers.get('Content-Type')).toContain('text/plain');
+  })
 });
