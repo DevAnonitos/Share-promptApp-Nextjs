@@ -9,6 +9,7 @@ describe("API Authentication", () => {
   it("should return a data json from API auth routes", async () => {
     const res = await fetch(baseUrl);
     const data = await res.json();
+    console.log(data);
     expect(data).toBeDefined();
     expect(data).toMatchSnapshot()
   })
