@@ -5,3 +5,9 @@ exports[`API status code should make a successful GET request to localhost 1`] =
   "data": "Mocked response",
 }
 `;
+
+exports[`API status code should make a successful GET request to localhost 2`] = `
+{
+  "data": "Mocked response",
+}
+`;

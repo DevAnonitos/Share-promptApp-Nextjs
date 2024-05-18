@@ -13,7 +13,8 @@ describe('API status code', () => {
       const response = await axios.get('http://localhost/3000');
   
       expect(response.status).toBe(200);
-      expect(response.data).toEqual(responseData);
+      expect(response.status).toMatchSnapshot()
+      expect(response.data).toEqual(responseData)
       expect(response.data).toMatchSnapshot()
     });
     //status 400->
