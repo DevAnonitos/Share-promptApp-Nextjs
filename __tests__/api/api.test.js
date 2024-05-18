@@ -14,6 +14,7 @@ describe('API status code', () => {
   
       expect(response.status).toBe(200);
       expect(response.data).toEqual(responseData);
+      expect(response.data).toMatchSnapshot()
     });
     //status 400->
     it("should make a not-found GET request to localhost", async () => {

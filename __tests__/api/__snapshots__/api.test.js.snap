@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`API status code should make a successful GET request to localhost 1`] = `
+{
+  "data": "Mocked response",
+}
+`;
