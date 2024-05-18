@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
 * @jest-environment node
 */
@@ -48,7 +47,7 @@ describe('API Prompt', () => {
     expect(response.headers.get('Content-Type')).toMatchSnapshot()
   })
 });
-=======
+
 import { GET } from "@/app/api/prompt/route";
 import axios from "axios";
 
@@ -67,4 +66,4 @@ describe("API Prompt Route", () => {
         expect(console.log).toHaveBeenCalledWith(mockResponse);
     })
 })
->>>>>>> 6f6d1ef (update:Add->Test)
+
