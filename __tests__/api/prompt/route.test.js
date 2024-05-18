@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
 * @jest-environment node
 */
@@ -47,3 +48,23 @@ describe('API Prompt', () => {
     expect(response.headers.get('Content-Type')).toMatchSnapshot()
   })
 });
+=======
+import { GET } from "@/app/api/prompt/route";
+import axios from "axios";
+
+describe("API Prompt Route", () => {
+    it("should make a JSON data GET request to http://localhost:3000/api/prompt", async () => {
+        const mockResponse = { /* Mock response data */ };
+        global.fetch = jest.fn().mockResolvedValue({
+            ok: true,
+            json: jest.fn().mockResolvedValue(mockResponse)
+        });c
+
+        await fetchData();
+
+        expect(fetch).toHaveBeenCalledWith('http://localhost:3000/api/prompt');
+        expect(fetch).toHaveBeenCalledTimes(1);
+        expect(console.log).toHaveBeenCalledWith(mockResponse);
+    })
+})
+>>>>>>> 6f6d1ef (update:Add->Test)
