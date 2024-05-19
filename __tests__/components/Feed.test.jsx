@@ -9,4 +9,9 @@ describe("FeedComponent", () => {
     render(<Feed />)
       expect(screen.getByPlaceholderText("Search for a tag or a username...")).toMatchSnapshot()
   })
+
+  it("should render the FeedComponent", () => {
+    expect(Feed).toBeDefined()
+    expect(Feed).toMatchSnapshot()
+  })
 })
