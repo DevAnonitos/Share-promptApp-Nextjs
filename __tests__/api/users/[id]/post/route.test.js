@@ -22,4 +22,11 @@ describe("API User Prompt", () => {
     expect(res.status).toBe(200);
     expect(data).toMatchSnapshot()
   })
+
+  it("shoud be [GET} reuturn status code from API /api/users/[id]/posts/route", async () => {
+    // const res = await GET();
+    // const data = await res.json();
+    // console.log(data);
+    // expect(res.status).toBe(200)
+  })
 })
