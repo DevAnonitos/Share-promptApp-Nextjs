@@ -1,0 +1,260 @@
+<html><head><meta charset="utf-8"/><title>Test Report</title><style type="text/css">html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+body {
+  padding: 2rem 1rem;
+  font-size: 0.85rem;
+}
+.jesthtml-content {
+  margin: 0 auto;
+  max-width: 70rem;
+}
+header {
+  display: flex;
+  align-items: center;
+}
+#title {
+  margin: 0;
+  flex-grow: 1;
+}
+#logo {
+  height: 4rem;
+}
+#timestamp {
+  color: #777;
+  margin-top: 0.5rem;
+}
+
+/** SUMMARY */
+#summary {
+  color: #333;
+  margin: 2rem 0;
+  display: flex;
+  font-family: monospace;
+  font-size: 1rem;
+}
+#summary > div {
+  margin-right: 2rem;
+  background: #eee;
+  padding: 1rem;
+  min-width: 15rem;
+}
+#summary > div:last-child {
+  margin-right: 0;
+}
+@media only screen and (max-width: 720px) {
+  #summary {
+    flex-direction: column;
+  }
+  #summary > div {
+    margin-right: 0;
+    margin-top: 2rem;
+  }
+  #summary > div:first-child {
+    margin-top: 0;
+  }
+}
+
+.summary-total {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.summary-passed {
+  color: #4f8a10;
+  border-left: 0.4rem solid #4f8a10;
+  padding-left: 0.5rem;
+}
+.summary-failed,
+.summary-obsolete-snapshots {
+  color: #d8000c;
+  border-left: 0.4rem solid #d8000c;
+  padding-left: 0.5rem;
+}
+.summary-pending {
+  color: #9f6000;
+  border-left: 0.4rem solid #9f6000;
+  padding-left: 0.5rem;
+}
+.summary-empty {
+  color: #999;
+  border-left: 0.4rem solid #999;
+}
+
+.test-result {
+  padding: 1rem;
+  margin-bottom: 0.25rem;
+}
+.test-result:last-child {
+  border: 0;
+}
+.test-result.passed {
+  background-color: #dff2bf;
+  color: #4f8a10;
+}
+.test-result.failed {
+  background-color: #ffbaba;
+  color: #d8000c;
+}
+.test-result.pending {
+  background-color: #ffdf61;
+  color: #9f6000;
+}
+
+.test-info {
+  display: flex;
+  justify-content: space-between;
+}
+.test-suitename {
+  width: 20%;
+  text-align: left;
+  font-weight: bold;
+  word-break: break-word;
+}
+.test-title {
+  width: 40%;
+  text-align: left;
+  font-style: italic;
+}
+.test-status {
+  width: 20%;
+  text-align: right;
+}
+.test-duration {
+  width: 10%;
+  text-align: right;
+  font-size: 0.75rem;
+}
+
+.failureMessages {
+  padding: 0 1rem;
+  margin-top: 1rem;
+  border-top: 1px dashed #d8000c;
+}
+.failureMessages.suiteFailure {
+  border-top: none;
+}
+.failureMsg {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+.suite-container {
+  margin-bottom: 2rem;
+}
+.suite-container > input[type="checkbox"] {
+  position: absolute;
+  left: -100vw;
+}
+.suite-container label {
+  display: block;
+}
+.suite-container .suite-tests {
+  overflow-y: hidden;
+  height: 0;
+}
+.suite-container > input[type="checkbox"]:checked ~ .suite-tests {
+  height: auto;
+  overflow: visible;
+}
+.suite-info {
+  padding: 1rem;
+  background-color: #eee;
+  color: #777;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+.suite-info:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+.suite-info .suite-path {
+  word-break: break-all;
+  flex-grow: 1;
+  font-family: monospace;
+  font-size: 1rem;
+}
+.suite-info .suite-time {
+  margin-left: 0.5rem;
+  padding: 0.2rem 0.3rem;
+  font-size: 0.75rem;
+}
+.suite-info .suite-time.warn {
+  background-color: #d8000c;
+  color: #fff;
+}
+.suite-info:before {
+  content: "\2303";
+  display: inline-block;
+  margin-right: 0.5rem;
+  transform: rotate(0deg);
+}
+.suite-container > input[type="checkbox"]:checked ~ label .suite-info:before {
+  transform: rotate(180deg);
+}
+
+/* CONSOLE LOGS */
+.suite-consolelog {
+  margin-bottom: 0.25rem;
+  padding: 1rem;
+  background-color: #efefef;
+}
+.suite-consolelog-header {
+  font-weight: bold;
+}
+.suite-consolelog-item {
+  padding: 0.5rem;
+}
+.suite-consolelog-item pre {
+  margin: 0.5rem 0;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+.suite-consolelog-item-origin {
+  color: #777;
+  font-weight: bold;
+}
+.suite-consolelog-item-message {
+  color: #000;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+}
+
+/* OBSOLETE SNAPSHOTS */
+.suite-obsolete-snapshots {
+  margin-bottom: 0.25rem;
+  padding: 1rem;
+  background-color: #ffbaba;
+  color: #d8000c;
+}
+.suite-obsolete-snapshots-header {
+  font-weight: bold;
+}
+.suite-obsolete-snapshots-item {
+  padding: 0.5rem;
+}
+.suite-obsolete-snapshots-item pre {
+  margin: 0.5rem 0;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+.suite-obsolete-snapshots-item-message {
+  color: #000;
+  font-size: 1rem;
+  padding: 0 0.5rem;
+}
+</style></head><body><div class="jesthtml-content"><header><h1 id="title">Test Report</h1></header><div id="metadata-container"><div id="timestamp">Started: 2024-05-19 15:54:47</div><div id="summary"><div id="suite-summary"><div class="summary-total">Suites (19)</div><div class="summary-passed ">16 passed</div><div class="summary-failed ">3 failed</div><div class="summary-pending  summary-empty">0 pending</div></div><div id="test-summary"><div class="summary-total">Tests (44)</div><div class="summary-passed ">38 passed</div><div class="summary-failed ">6 failed</div><div class="summary-pending  summary-empty">0 pending</div></div></div></div><div id="suite-1" class="suite-container"><input id="collapsible-0" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-0"><div class="suite-info"><div class="suite-path">D:\2-bai tap cua dev\Project training web\Share_prompt\share-prompt-ai\__tests__\api\api.test.js</div><div class="suite-time">1.582s</div></div></label><div class="suite-tests"><div class="test-result failed"><div class="test-info"><div class="test-suitename">API status code</div><div class="test-title">should make a successful GET request to localhost</div><div class="test-status">failed</div><div class="test-duration">0.025s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">API status code</div><div class="test-title">should make a not-found GET request to localhost</div><div class="test-status">passed</div><div class="test-duration">0.067s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">API status code</div><div class="test-title">should make a unauthorized GET request to localhost</div><div class="test-status">failed</div><div class="test-duration">0.006s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">API status code</div><div class="test-title">should make a forbiden GET request to localhost</div><div class="test-status">passed</div><div class="test-duration">0.004s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">API status code</div><div class="test-title">should make a server-error GET request to localhost</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">API status code</div><div class="test-title">should make a bad-gateway GET request to localhost</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test performance localhost</div><div class="test-title">should simulate some load on localhost</div><div class="test-status">passed</div><div class="test-duration">0.047s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Test performance localhost</div><div class="test-title">should not have significant memory increase during load</div><div class="test-status">passed</div><div class="test-duration">0.019s</div></div></div></div></div><div id="suite-2" class="suite-container"><input id="collapsible-1" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-1"><div class="suite-info"><div class="suite-path">D:\2-bai tap cua dev\Project training web\Share_prompt\share-prompt-ai\__tests__\api\auth\route.test.js</div><div class="suite-time">3s</div></div></label><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">API Authentication</div><div class="test-title">should return a data json from API auth routes</div><div class="test-status">passed</div><div class="test-duration">0.355s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">API Authentication</div><div class="test-title">should return a status 200 from API auth routes</div><div class="test-status">passed</div><div class="test-duration">0.055s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">API Authentication</div><div class="test-title">should [GET] from get API Route /api/auth/providers</div><div class="test-status">failed</div><div class="test-duration">0.001s</div></div></div></div></div><div id="suite-3" class="suite-container"><input id="collapsible-2" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-2"><div class="suite-info"><div class="suite-path">D:\2-bai tap cua dev\Project training web\Share_prompt\share-prompt-ai\__tests__\pages\CreatePrompt.test.jsx</div><div class="suite-time">2.605s</div></div></label><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">CreatePromptPage</div><div class="test-title">should render the prompt form (authenticated)</div><div class="test-status">passed</div><div class="test-duration">0.134s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">CreatePromptPage</div><div class="test-title">should redirect to login (unauthenticated)</div><div class="test-status">passed</div><div class="test-duration">0.008s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">CreatePromptPage</div><div class="test-title">should render CreatePromptPage Component</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div></div></div><div id="suite-4" class="suite-container"><input id="collapsible-3" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-3"><div class="suite-info"><div class="suite-path">D:\2-bai tap cua dev\Project training web\Share_prompt\share-prompt-ai\__tests__\api\users\[id]\post\route.test.js</div><div class="suite-time">3.571s</div></div></label><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">API User Prompt</div><div class="test-title">should be return data json from /api/users/[id]/post</div><div class="test-status">passed</div><div class="test-duration">1.01s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">API User Prompt</div><div class="test-title">should be return status from /api/users/[id]/post</div><div class="test-status">passed</div><div class="test-duration">0.561s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">API User Prompt</div><div class="test-title">shoud be [GET} reuturn status code from API /api/users/[id]/posts/route</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div></div></div><div id="suite-5" class="suite-container"><input id="collapsible-4" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-4"><div class="suite-info"><div class="suite-path">D:\2-bai tap cua dev\Project training web\Share_prompt\share-prompt-ai\__tests__\api\prompt\id\route.test.js</div><div class="suite-time">3.643s</div></div></label><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">API prompt ID</div><div class="test-title">should return data json from API route Prompt ID</div><div class="test-status">passed</div><div class="test-duration">1.034s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">API prompt ID</div><div class="test-title">should return status 200 from API route Prompt ID</div><div class="test-status">passed</div><div class="test-duration">0.6s</div></div></div></div></div><div id="suite-6" class="suite-container"><input id="collapsible-5" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-5"><div class="suite-info"><div class="suite-path">D:\2-bai tap cua dev\Project training web\Share_prompt\share-prompt-ai\__tests__\pages\Profile.test.jsx</div><div class="suite-time">1.559s</div></div></label><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">Profile Page</div><div class="test-title">should render MyProfile Page Component</div><div class="test-status">passed</div><div class="test-duration">0.004s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Profile Page</div><div class="test-title">should render UserProfile Page Component</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div></div></div><div id="suite-7" class="suite-container"><input id="collapsible-6" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-6"><div class="suite-info"><div class="suite-path">D:\2-bai tap cua dev\Project training web\Share_prompt\share-prompt-ai\__tests__\components\PromptCard.test.jsx</div><div class="suite-time">0.973s</div></div></label><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">PromptCardComponent</div><div class="test-title">should render a PromptCard Component</div><div class="test-status">passed</div><div class="test-duration">0.006s</div></div></div></div></div><div id="suite-8" class="suite-container"><input id="collapsible-7" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-7"><div class="suite-info"><div class="suite-path">D:\2-bai tap cua dev\Project training web\Share_prompt\share-prompt-ai\__tests__\pages\index.test.js</div><div class="suite-time">1.39s</div></div></label><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">Page Imports</div><div class="test-title">should import all Pages without errors</div><div class="test-status">passed</div><div class="test-duration">0.004s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Page Imports</div><div class="test-title">should import all Pages without errors by snapShot</div><div class="test-status">passed</div><div class="test-duration">0.004s</div></div></div></div></div><div id="suite-9" class="suite-container"><input id="collapsible-8" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-8"><div class="suite-info"><div class="suite-path">D:\2-bai tap cua dev\Project training web\Share_prompt\share-prompt-ai\__tests__\pages\Home.test.jsx</div><div class="suite-time">2.232s</div></div></label><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">HomePage</div><div class="test-title">should render a HomePage Header text</div><div class="test-status">passed</div><div class="test-duration">0.06s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">HomePage</div><div class="test-title">should render the description text</div><div class="test-status">passed</div><div class="test-duration">0.007s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">HomePage</div><div class="test-title">should match the snapshot</div><div class="test-status">passed</div><div class="test-duration">0.013s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">HomePage</div><div class="test-title">should render the Feed Component</div><div class="test-status">passed</div><div class="test-duration">0.004s</div></div></div></div></div><div id="suite-10" class="suite-container"><input id="collapsible-9" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-9"><div class="suite-info"><div class="suite-path">D:\2-bai tap cua dev\Project training web\Share_prompt\share-prompt-ai\__tests__\pages\UpdatePrompt.test.jsx</div><div class="suite-time">1.23s</div></div></label><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">UpdatePrompt</div><div class="test-title">should render UpdatePrompt Page</div><div class="test-status">passed</div><div class="test-duration">0.004s</div></div></div></div></div><div id="suite-11" class="suite-container"><input id="collapsible-10" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-10"><div class="suite-info"><div class="suite-path">D:\2-bai tap cua dev\Project training web\Share_prompt\share-prompt-ai\__tests__\components\NavBar.test.jsx</div><div class="suite-time">1.815s</div></div></label><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">NavbarComponent</div><div class="test-title">Should render NavbarComponents</div><div class="test-status">passed</div><div class="test-duration">0.005s</div></div></div></div></div><div id="suite-12" class="suite-container"><input id="collapsible-11" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-11"><div class="suite-info"><div class="suite-path">D:\2-bai tap cua dev\Project training web\Share_prompt\share-prompt-ai\__tests__\pages\RootLayout.test.jsx</div><div class="suite-time">1.852s</div></div></label><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">MainLayout</div><div class="test-title">should render RootLayout component</div><div class="test-status">passed</div><div class="test-duration">0.003s</div></div></div></div></div><div id="suite-13" class="suite-container"><input id="collapsible-12" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-12"><div class="suite-info"><div class="suite-path">D:\2-bai tap cua dev\Project training web\Share_prompt\share-prompt-ai\__tests__\components\Feed.test.jsx</div><div class="suite-time">0.915s</div></div></label><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">FeedComponent</div><div class="test-title">should render the Search Field Text</div><div class="test-status">passed</div><div class="test-duration">0.069s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">FeedComponent</div><div class="test-title">should render the FeedComponent</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div></div></div><div id="suite-14" class="suite-container"><input id="collapsible-13" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-13"><div class="suite-info"><div class="suite-path">D:\2-bai tap cua dev\Project training web\Share_prompt\share-prompt-ai\__tests__\components\index.test.js</div><div class="suite-time">0.652s</div></div></label><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">Component Imports</div><div class="test-title">should import all components without errors</div><div class="test-status">passed</div><div class="test-duration">0.005s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Component Imports</div><div class="test-title">should import all components without errors snapShot</div><div class="test-status">passed</div><div class="test-duration">0.008s</div></div></div></div></div><div id="suite-15" class="suite-container"><input id="collapsible-14" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-14"><div class="suite-info"><div class="suite-path">D:\2-bai tap cua dev\Project training web\Share_prompt\share-prompt-ai\__tests__\components\Profile.test.jsx</div><div class="suite-time">1.015s</div></div></label><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">ProfileComponent</div><div class="test-title">should render Profile Component</div><div class="test-status">passed</div><div class="test-duration">0.004s</div></div></div></div></div><div id="suite-16" class="suite-container"><input id="collapsible-15" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-15"><div class="suite-info"><div class="suite-path">D:\2-bai tap cua dev\Project training web\Share_prompt\share-prompt-ai\__tests__\libs\database.test.js</div><div class="suite-time">0.647s</div></div></label><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">Database Connection</div><div class="test-title">should render connection mongoDB</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div></div></div><div id="suite-17" class="suite-container"><input id="collapsible-16" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-16"><div class="suite-info"><div class="suite-path">D:\2-bai tap cua dev\Project training web\Share_prompt\share-prompt-ai\__tests__\components\Provider.test.jsx</div><div class="suite-time">1.024s</div></div></label><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">ProviderComponent</div><div class="test-title">should render Provider Components</div><div class="test-status">passed</div><div class="test-duration">0.003s</div></div></div></div></div><div id="suite-18" class="suite-container"><input id="collapsible-17" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-17"><div class="suite-info"><div class="suite-path">D:\2-bai tap cua dev\Project training web\Share_prompt\share-prompt-ai\__tests__\components\Form.test.jsx</div><div class="suite-time">0.96s</div></div></label><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">Form Components</div><div class="test-title">should render Form Component</div><div class="test-status">passed</div><div class="test-duration">0.003s</div></div></div></div></div><div id="suite-19" class="suite-container"><input id="collapsible-18" type="checkbox" class="toggle" checked="checked"/><label for="collapsible-18"><div class="suite-info"><div class="suite-path">D:\2-bai tap cua dev\Project training web\Share_prompt\share-prompt-ai\__tests__\api\prompt\route.test.js</div><div class="suite-time warn">14.378s</div></div></label><div class="suite-tests"><div class="test-result failed"><div class="test-info"><div class="test-suitename">API Prompt</div><div class="test-title">should return data json from API Prompt</div><div class="test-status">failed</div><div class="test-duration">1.103s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">API Prompt</div><div class="test-title">should [GET]: response data as JSON from API Route</div><div class="test-status">failed</div><div class="test-duration">5.014s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">API Prompt</div><div class="test-title">should [GET]: a fail response data as JSON from API Route</div><div class="test-status">failed</div><div class="test-duration">5.014s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">API Prompt</div><div class="test-title">should Response status code is 200</div><div class="test-status">passed</div><div class="test-duration">0.598s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">API Prompt</div><div class="test-title">should Response has the required fields</div><div class="test-status">passed</div><div class="test-duration">0.592s</div></div></div></div></div></div></body></html>
