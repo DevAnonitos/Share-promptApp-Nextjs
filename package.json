@@ -35,8 +35,8 @@
     "lint": "next lint",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "test": "jest --watch --coverage --reporters=jest-html-reporter",
-    "test:watch": "jest --watch"
+    "test": "jest",
+    "test:watch": "jest --watch --coverage --reporters=jest-html-reporter"
   },
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
