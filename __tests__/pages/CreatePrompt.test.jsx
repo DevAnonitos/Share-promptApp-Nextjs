@@ -40,4 +40,9 @@ describe("CreatePromptPage", () => {
     render(<CreatePrompt router={router} />); 
     expect(router.push).toMatchSnapshot();
   });
+
+  it("should render CreatePromptPage Component", () => {
+    expect(CreatePrompt).toBeDefined()
+    expect(CreatePrompt).toMatchSnapshot()
+  })
 });

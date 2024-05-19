@@ -2,6 +2,8 @@
 
 exports[`CreatePromptPage should redirect to login (unauthenticated) 1`] = `undefined`;
 
+exports[`CreatePromptPage should render CreatePromptPage Component 1`] = `[Function]`;
+
 exports[`CreatePromptPage should render the prompt form (authenticated) 1`] = `
 <form
   class="mt-10 w-full max-w-2xl   flex flex-col gap-7 glassmorphism shadow-xl"
