@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import PromptCard from "./PromptCard";
 
+// Create PromptCardList Components
 const PromptCardList = ({ data, handleTagClick }) => {
     return (
         <div className='mt-16 prompt_layout'>
@@ -17,6 +18,7 @@ const PromptCardList = ({ data, handleTagClick }) => {
     );
 };
 
+// Create Components Feed
 const Feed = () => {
     // Fetch AllPosts
     const [allPosts, setAllPosts] = useState([]);

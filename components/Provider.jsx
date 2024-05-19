@@ -3,6 +3,7 @@
 import React from 'react';
 import { SessionProvider } from 'next-auth/react';
 
+// Create Session Provider
 const Provider = ({ children, session }) => {
     
     return (
