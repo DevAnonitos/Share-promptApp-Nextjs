@@ -8,6 +8,7 @@ import { Profile } from '@/components';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+// Create MyProfile COmponents
 const MyProfile = () => {
 
     const router = useRouter();

@@ -10,7 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 //     title: "PromptApp",
 //     description: "Discover & Share AI Prompts",
 // };
-
+// Create RootLayout Page Componenst
 const RootLayout = ({ children }) => {
     return(
         <html lang="en">

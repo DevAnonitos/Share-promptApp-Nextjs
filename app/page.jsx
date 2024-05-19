@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Feed } from '@/components';
 
+// Create HomePage Components
 const HomePage = () => {
 
     const [showFeed, setShowFeed] = useState(false);

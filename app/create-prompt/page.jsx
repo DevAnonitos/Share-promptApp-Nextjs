@@ -8,6 +8,7 @@ import { Form } from "../../components";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+// Create CreatePrompt Components
 const CreatePrompt = () => {
 
     const router = useRouter();
