@@ -1,5 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`API status code should make a forbiden GET request to localhost 1`] = `403`;
+
+exports[`API status code should make a not-found GET request to localhost 1`] = `404`;
+
 exports[`API status code should make a successful GET request to localhost 1`] = `
 {
   "data": "Mocked response",
