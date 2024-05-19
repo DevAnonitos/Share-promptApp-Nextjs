@@ -1,6 +1,7 @@
 const { webpack } = require('webpack');
 const path = require('path');
 
+// Config module builder next js 13
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     experimental: {
