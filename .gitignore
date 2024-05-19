@@ -5,6 +5,8 @@ log
 .vscode
 .idx
 
+.log
+
 # dependencies
 /node_modules
 /.pnp
