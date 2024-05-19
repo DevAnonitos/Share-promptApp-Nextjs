@@ -17,5 +17,5 @@ describe('Component Imports', () => {
     expect(Profile).toMatchSnapshot()
     expect(PromptCard).toMatchSnapshot()
     expect(Provider).toMatchSnapshot()
-});
+  });
 });
