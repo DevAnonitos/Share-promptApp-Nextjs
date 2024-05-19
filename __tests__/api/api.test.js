@@ -124,6 +124,7 @@ describe("Test performance localhost", () => {
         try {
           const response = await axios.get(apiUrl);
           expect(response.status).toBe(200)
+          expect(response.status).toMatchSnapshot()
         } catch (error) {
           console.error("Error during request:", error);
         }
