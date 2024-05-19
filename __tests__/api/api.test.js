@@ -28,8 +28,10 @@ describe('API status code', () => {
       try {
         await axios.get(apiUrl)
         expect(true).toBe(false)
+        expect(true).toMatchSnapshot()
       } catch (error) {
         expect(error.response.status).toBe(404);
+        expect(error.response.status).toMatchSnapshot();
       }
     })
 
@@ -41,8 +43,10 @@ describe('API status code', () => {
       try {
         await axios.get(apiUrl)
         expect(true).toBe(false)
+        expect(true).toMatchSnapshot()
       } catch (error) {
         expect(error.response.status).toBe(404);
+        expect(error.response.status).toMatchSnapshot();
       }
     })
 
@@ -54,8 +58,10 @@ describe('API status code', () => {
       try {
         await axios.get(apiUrl);
         expect(true).toBe(false);
+        expect(true).toMatchSnapshot();
       } catch (error) {
         expect(error.response.status).toBe(403);
+        expect(error.response.status).toMatchSnapshot();
       }
     })
 
