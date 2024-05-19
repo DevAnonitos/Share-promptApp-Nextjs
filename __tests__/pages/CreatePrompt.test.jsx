@@ -25,6 +25,7 @@ describe("CreatePromptPage", () => {
 
     try {
       expect(screen.getByRole('form')).toBeInTheDocument(); 
+      expect(screen.getByRole('form')).toMatchSnapshot()
     } catch (error) {
       console.error('Error in assertion:', error.message); 
     }
@@ -39,6 +40,6 @@ describe("CreatePromptPage", () => {
     const router = jest.fn(); 
     render(<CreatePrompt router={router} />); 
 
-    expect(router.push)
+    expect(router.push).toMatchSnapshot()
   });
 });
