@@ -8,5 +8,6 @@ import { useSession } from "next-auth/react";
 describe("UpdatePrompt", () => {
   it('should render UpdatePrompt Page', () => {
     expect(UpdatePrompt).toBeDefined()
+    expect(UpdatePrompt).toMatchSnapshot()
   });
 })
