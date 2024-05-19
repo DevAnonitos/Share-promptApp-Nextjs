@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile Page should render MyProfile Page Component 1`] = `[Function]`;
+
+exports[`Profile Page should render UserProfile Page Component 1`] = `[Function]`;
