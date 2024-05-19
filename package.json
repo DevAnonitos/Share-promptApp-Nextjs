@@ -73,6 +73,7 @@
     "cypress": "13.7.0",
     "jest": "29.7.0",
     "jest-environment-jsdom": "29.7.0",
+    "jest-html-reporter": "3.10.2",
     "node-fetch": "3.3.2"
   },
   "engines": {
