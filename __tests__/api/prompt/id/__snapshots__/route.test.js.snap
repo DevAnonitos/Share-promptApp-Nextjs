@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`API prompt ID should return data json from API route Prompt ID 1`] = `
+{
+  "__v": 0,
+  "_id": "645cef4b3a66a9ea8f5f46c9",
+  "creator": {
+    "__v": 0,
+    "_id": "645a5ff09c6a32502c433959",
+    "email": "nguyebao281003@gmail.com",
+    "image": "https://lh3.googleusercontent.com/a/AGNmyxZ3gxWO5zNF-XeG---qMq4521lDBjTF0ZUtxJk98w=s96-c",
+    "username": "nguyebao281003",
+  },
+  "prompt": "Brad Rigney is a concept artist of fantasy themes, 4 : 3",
+  "tag": "stable-diffusion",
+}
+`;
+
+exports[`API prompt ID should return status 200 from API route Prompt ID 1`] = `
+{
+  "__v": 0,
+  "_id": "645cef4b3a66a9ea8f5f46c9",
+  "creator": {
+    "__v": 0,
+    "_id": "645a5ff09c6a32502c433959",
+    "email": "nguyebao281003@gmail.com",
+    "image": "https://lh3.googleusercontent.com/a/AGNmyxZ3gxWO5zNF-XeG---qMq4521lDBjTF0ZUtxJk98w=s96-c",
+    "username": "nguyebao281003",
+  },
+  "prompt": "Brad Rigney is a concept artist of fantasy themes, 4 : 3",
+  "tag": "stable-diffusion",
+}
+`;

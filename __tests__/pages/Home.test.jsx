@@ -13,8 +13,8 @@ describe('HomePage', () => {
   it("should render a HomePage Header text", () => {
     render(<HomePage />)
   
-    expect(screen.getAllByText("Discover & Share"))
-    expect(screen.getAllByText("Generative AI-Prompts"))
+    expect(screen.getAllByText("Discover & Share")).toMatchSnapshot();
+    expect(screen.getAllByText("Generative AI-Prompts")).toMatchSnapshot();
     
   })
 
@@ -23,11 +23,19 @@ describe('HomePage', () => {
     expect(
       getByText(/PromptApp is an open-source AI prompting tool for modern world to discover, create and share creative prompts./)
     ).toBeInTheDocument();
+    expect(
+      getByText(/PromptApp is an open-source AI prompting tool for modern world to discover, create and share creative prompts./)
+    ).toMatchSnapshot();
   });
+
+  it('should match the snapshot', () => {
+    const { asFragment } = render(<HomePage />);
+    expect(asFragment()).toMatchSnapshot();
+});
 
   it("should render the Feed Component", async () => {
     render(<HomePage />)
 
-    expect(screen.getByTestId('feed-mock'))
+    expect(screen.getByTestId('feed-mock')).toMatchSnapshot();
   })
 })

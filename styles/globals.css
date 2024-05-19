@@ -4,6 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Config style Css */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -114,6 +115,7 @@
   opacity: 0.15;
 }
 
+/* View port responsive */
 @media screen and (max-width: 640px) {
   .main {
     padding: 0;
@@ -148,6 +150,7 @@
 
 
 /* Tailwind Styles */
+/* Config classname by tailwindCss */
 
 .app {
   @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;

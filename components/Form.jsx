@@ -3,6 +3,7 @@
 import Link from "next/link";
 import React, { useState, useEffect } from 'react';
 
+// Create Components Form
 const Form = ({ type, post, setPost, submitting, handleSubmit }) => {
 
     const [placeholderIndex, setPlaceholderIndex] = useState(0);

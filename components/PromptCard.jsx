@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useSession } from 'next-auth/react';
 import { usePathname, useRouter } from 'next/navigation';
 
+// Create PromptCard Components
 const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
 
     const { data: session } = useSession();

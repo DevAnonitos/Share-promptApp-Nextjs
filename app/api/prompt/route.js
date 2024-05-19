@@ -11,8 +11,9 @@ export const GET = async (request) => {
             status: 200,
         });
     } catch (error) {
-        return new Response(JSON("Fail to fetch All prompts", {
+        console.log(error);
+        return new Response(JSON.stringify("Fail to fetch All prompts"), {
             status: 500,
-        }))
+        });
     }
 };

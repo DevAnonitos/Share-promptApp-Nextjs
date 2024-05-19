@@ -1,5 +1,6 @@
 import { Schema, model, models } from 'mongoose';
 
+// Create UserSchema mongoose
 const UserSchema = new Schema({
     email: {
         type: String,

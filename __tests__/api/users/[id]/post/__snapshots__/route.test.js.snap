@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`API User Prompt should be return data json from /api/users/[id]/post 1`] = `
+[
+  {
+    "__v": 0,
+    "_id": "65e9e4d144e66c1538cf36f1",
+    "creator": {
+      "__v": 0,
+      "_id": "64c52aa0183b5594893e6952",
+      "email": "nguyenbao2810dev@gmail.com",
+      "image": "https://lh3.googleusercontent.com/a/AAcHTtd7ZyyZuG3rOtC70yT412sBj6dpowJIyJG3zqONzb58RQ=s96-c",
+      "username": "nguyenbao2810dev",
+    },
+    "prompt": "testing App ne",
+    "tag": "test",
+  },
+  {
+    "__v": 0,
+    "_id": "65f50633ac1867d4610726cc",
+    "creator": {
+      "__v": 0,
+      "_id": "64c52aa0183b5594893e6952",
+      "email": "nguyenbao2810dev@gmail.com",
+      "image": "https://lh3.googleusercontent.com/a/AAcHTtd7ZyyZuG3rOtC70yT412sBj6dpowJIyJG3zqONzb58RQ=s96-c",
+      "username": "nguyenbao2810dev",
+    },
+    "prompt": "HDR photo of woman with hair in a messy bun smiles at the viewer, perfect eyes, beautiful skin, outside on a warm sunny day wearing a summer dress . High dynamic range, vivid, rich details, clear shadows and highlights, realistic, intense, enhanced contrast, highly detailed",
+    "tag": "stable diffusion",
+  },
+  {
+    "__v": 0,
+    "_id": "65f506c8ac1867d4610726d4",
+    "creator": {
+      "__v": 0,
+      "_id": "64c52aa0183b5594893e6952",
+      "email": "nguyenbao2810dev@gmail.com",
+      "image": "https://lh3.googleusercontent.com/a/AAcHTtd7ZyyZuG3rOtC70yT412sBj6dpowJIyJG3zqONzb58RQ=s96-c",
+      "username": "nguyenbao2810dev",
+    },
+    "prompt": "A portrait of a young woman with sun-kissed blonde wavy hair and light hazel eyes. She has a clear complexion with a scattering of freckles across her nose and cheeks. Her expression is contemplative as she gazes towards the viewer. She wears minimal makeup, with a focus on her eyes, and an elegant white or silver drop earring. She is in a simple black sleeveless top, against a soft, natural background suggesting an outdoor setting. The lighting is soft and natural, highlighting her features with a serene ambiance.
+  
+",
+    "tag": "stable diffusion",
+  },
+]
+`;
+
+exports[`API User Prompt should be return status from /api/users/[id]/post 1`] = `
+[
+  {
+    "__v": 0,
+    "_id": "65e9e4d144e66c1538cf36f1",
+    "creator": {
+      "__v": 0,
+      "_id": "64c52aa0183b5594893e6952",
+      "email": "nguyenbao2810dev@gmail.com",
+      "image": "https://lh3.googleusercontent.com/a/AAcHTtd7ZyyZuG3rOtC70yT412sBj6dpowJIyJG3zqONzb58RQ=s96-c",
+      "username": "nguyenbao2810dev",
+    },
+    "prompt": "testing App ne",
+    "tag": "test",
+  },
+  {
+    "__v": 0,
+    "_id": "65f50633ac1867d4610726cc",
+    "creator": {
+      "__v": 0,
+      "_id": "64c52aa0183b5594893e6952",
+      "email": "nguyenbao2810dev@gmail.com",
+      "image": "https://lh3.googleusercontent.com/a/AAcHTtd7ZyyZuG3rOtC70yT412sBj6dpowJIyJG3zqONzb58RQ=s96-c",
+      "username": "nguyenbao2810dev",
+    },
+    "prompt": "HDR photo of woman with hair in a messy bun smiles at the viewer, perfect eyes, beautiful skin, outside on a warm sunny day wearing a summer dress . High dynamic range, vivid, rich details, clear shadows and highlights, realistic, intense, enhanced contrast, highly detailed",
+    "tag": "stable diffusion",
+  },
+  {
+    "__v": 0,
+    "_id": "65f506c8ac1867d4610726d4",
+    "creator": {
+      "__v": 0,
+      "_id": "64c52aa0183b5594893e6952",
+      "email": "nguyenbao2810dev@gmail.com",
+      "image": "https://lh3.googleusercontent.com/a/AAcHTtd7ZyyZuG3rOtC70yT412sBj6dpowJIyJG3zqONzb58RQ=s96-c",
+      "username": "nguyenbao2810dev",
+    },
+    "prompt": "A portrait of a young woman with sun-kissed blonde wavy hair and light hazel eyes. She has a clear complexion with a scattering of freckles across her nose and cheeks. Her expression is contemplative as she gazes towards the viewer. She wears minimal makeup, with a focus on her eyes, and an elegant white or silver drop earring. She is in a simple black sleeveless top, against a soft, natural background suggesting an outdoor setting. The lighting is soft and natural, highlighting her features with a serene ambiance.
+  
+",
+    "tag": "stable diffusion",
+  },
+]
+`;

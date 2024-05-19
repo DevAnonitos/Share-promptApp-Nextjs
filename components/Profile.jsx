@@ -1,6 +1,7 @@
 import React from 'react';
 import  PromptCard  from './PromptCard';
 
+// Create Profie User Components
 const Profile = ({ name, desc, data , handleEdit, handleDelete }) => {
     return (
         <section className='w-full flex-center flex-col'>
