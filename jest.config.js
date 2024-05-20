@@ -44,12 +44,12 @@ const config = {
     '^.+\\.module\\.(css|sass|scss)$',
   ],
   // setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
-  reporters: [
-    ['jest-html-reporter', {
-      publicPath: './test-results', // Output directory for HTML report
-      pageTitle: 'Next.js Test Report', // Report title
-    }],
-  ],
+  // reporters: [
+  //   ['jest-html-reporter', {
+  //     publicPath: './test-results', // Output directory for HTML report
+  //     pageTitle: 'Next.js Test Report', // Report title
+  //   }],
+  // ],
   
 };
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async
